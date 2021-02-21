@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 #define TAPPING_TERM 200
+=======
+>>>>>>> ccf6caf3ea (added dev)
 #pragma once
 #undef LSPO_KEY
 #undef RSPC_KEY

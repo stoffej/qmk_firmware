@@ -3,7 +3,11 @@
 #   the appropriate keymap folder that will get included automatically
 #
 BOOTMAGIC_ENABLE = no       # Virtual DIP switch configuration(+1000)
+<<<<<<< HEAD
 MOUSEKEY_ENABLE = yes       # Mouse keys(+4700)
+=======
+MOUSEKEY_ENABLE = no       # Mouse keys(+4700)
+>>>>>>> ccf6caf3ea (added dev)
 EXTRAKEY_ENABLE = yes       # Audio control and System control(+450)
 CONSOLE_ENABLE = no         # Console for debug(+400)
 COMMAND_ENABLE = yes        # Commands for debug and configuration
@@ -15,5 +19,9 @@ BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
 RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight.
 SLEEP_LED_ENABLE = no       # Breathing sleep LED during USB suspend
 AUTO_SHIFT_ENABLE = no
+<<<<<<< HEAD
 UNICODEMAP_ENABLE = yes
 TAP_DANCE_ENABLE = yes
+=======
+UNICODEMAP_ENABLE = yes
+>>>>>>> ccf6caf3ea (added dev)
