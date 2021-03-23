@@ -9,11 +9,15 @@ enum layer_number {
   _QWERTY = 0,
   _COLEMAK,
 <<<<<<< HEAD
+<<<<<<< HEAD
   _EMOJI,
   _FUNCTION,
   _SWE
 =======
   _UPPER,
+=======
+  _EMOJI,
+>>>>>>> dcf467d6da (added unicodes)
   _FUNCTION,
 >>>>>>> ccf6caf3ea (added dev)
 };
@@ -63,13 +67,19 @@ enum unicode_names {
   UBUG,
   UPARTY,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dcf467d6da (added unicodes)
   UORHEART,
   UWHALE,
   UBOMB,
   UFACE_ROLLING_EYES,
   THNK
+<<<<<<< HEAD
 =======
 >>>>>>> 32099f0c53 (added unicode and corrected comments)
+=======
+>>>>>>> dcf467d6da (added unicodes)
 };
 
 
@@ -86,6 +96,9 @@ const uint32_t PROGMEM unicode_map[] = {
   [SE_OE_L] = 0x00F6,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dcf467d6da (added unicodes)
   [UKB]     = 0x2328,   // ⌨
   [UCOFFEE] = 0x2615,   // ☕
   [UVOLT]   = 0x26A1,   // ⚡
@@ -101,6 +114,7 @@ const uint32_t PROGMEM unicode_map[] = {
   [UBOMB] = 0x1F4A3,    // 💣
   [UFACE_ROLLING_EYES] = 0x1F644, // 🙄
   [THNK] = 0x1F914, // 🤔
+<<<<<<< HEAD
 =======
   [UKB]     = 0x2328,  // ⌨
   [UCOFFEE] = 0x2615,  // ☕
@@ -113,10 +127,13 @@ const uint32_t PROGMEM unicode_map[] = {
   [UBUG]  = 0x1F41B, //🐛
   [UPARTY] = 0x1F389//🎉
 >>>>>>> 32099f0c53 (added unicode and corrected comments)
+=======
+>>>>>>> dcf467d6da (added unicodes)
 };
 
 #define FN_BSPC LT(_FUNCTION, KC_BSPC)
 #define FN_SCLN LT(_FUNCTION, KC_SCLN)
+<<<<<<< HEAD
 #define FN_KC_N LT(_FUNCTION, KC_N)
 #define FN_KC_T LT(_FUNCTION, KC_T)
 #define SW_KC_E LT(_SWE, KC_E)
@@ -220,6 +237,9 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 #define FN_BSPC LT(_FUNCTION, KC_BSPC)
 #define FN_SCLN LT(_FUNCTION, KC_SCLN)
 >>>>>>> ccf6caf3ea (added dev)
+=======
+#define EM_TAB LT(_EMOJI,KC_TAB)
+>>>>>>> dcf467d6da (added unicodes)
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -267,10 +287,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |Shif| \|  Z|  X|  C|  D|  V|  K|  H|  ,|  .|  / | Shift| Up|PgDn|
 =======
     KC_ESC , KC_1   , KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC, KC_GRV,  \
-    KC_TAB , KC_Q   , KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC,          KC_DEL,  \
+    EM_TAB , KC_Q   , KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC,          KC_DEL,  \
     FN_BSPC, KC_A   , KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    FN_SCLN, KC_QUOT, KC_NUHS, KC_ENT,  KC_PGUP, \
     KC_LSPO, KC_NUBS, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSPC, KC_UP,   KC_PGDN, \
-    KC_LCTL, KC_LGUI, KC_LALT,                   KC_SPC,                             KC_RALT, MO(_UPPER), KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT
+    KC_LCTL, KC_LGUI, KC_LALT,                   KC_SPC,                             KC_RALT, MO(_FUNCTION), KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT
   ),
 
 
@@ -305,19 +325,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* Keymap _EMOJI: Layer Upper
 =======
     KC_ESC , KC_1   , KC_2   ,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC, KC_GRV,  \
-    KC_TAB , KC_Q   , KC_W   ,    KC_F,    KC_P,    KC_B,    KC_J,    KC_L,    KC_U,    KC_Y,    KC_P,    KC_LBRC, KC_RBRC,          KC_DEL,  \
+    EM_TAB , KC_Q   , KC_W   ,    KC_F,    KC_P,    KC_B,    KC_J,    KC_L,    KC_U,    KC_Y,    KC_P,    KC_LBRC, KC_RBRC,          KC_DEL,  \
     FN_BSPC, KC_A   , KC_R   ,    KC_S,    KC_T,    KC_G,    KC_M,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT, KC_NUHS, KC_ENT,  KC_PGUP, \
     KC_LSPO, KC_NUBS, KC_Z   ,    KC_X,    KC_C,    KC_D,    KC_V,    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSPC, KC_UP,   KC_PGDN, \
-    KC_LCTL, KC_LGUI, KC_LALT,                   KC_SPC,                             KC_RALT, MO(_UPPER), KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT
+    KC_LCTL, KC_LGUI, KC_LALT,                   KC_SPC,                             KC_RALT, MO(_FUNCTION), KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT
   ),
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   /* Keymap _BL: (Base Layer) Default Layer qwerty
 >>>>>>> ccf6caf3ea (added dev)
 =======
   /* Keymap _UPPER: Layer Upper
 >>>>>>> 32099f0c53 (added unicode and corrected comments)
+=======
+  /* Keymap _EMOJI: Layer Upper
+>>>>>>> dcf467d6da (added unicodes)
    * ,----------------------------------------------------------------.
    * |Esc | 1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  +|  '|Backspa |  ´|
    * |----------------------------------------------------------------|
@@ -330,6 +354,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |Ctrl|Win |Alt |        Space          |Alt| FN|Ctrl|Lef|Dow|Rig |
    * `----------------------------------------------------------------'
    */
+<<<<<<< HEAD
 <<<<<<< HEAD
   [_EMOJI] = LAYOUT_iso(
     _______, _______, _______, _______, _______, _______, _______,  _______,   _______, _______, _______, _______, _______,  _______, _______,  \
@@ -352,6 +377,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  KC_A , KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, KC_NUHS, KC_ENT,  KC_PGUP, \
     KC_LSPO, KC_NUBS, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSPC, KC_UP,   KC_PGDN, \
     KC_LCTL, KC_LGUI, KC_LALT,                   KC_SPC,                             KC_RALT,_______, KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT
+=======
+  [_EMOJI] = LAYOUT_iso(
+    _______, _______, _______, _______, _______, _______, _______,  _______,   _______, _______, _______, _______, _______,  _______, _______,  \
+    _______, _______, _______, _______, _______, _______,  X(UKB), X(UCOFFEE), X(UVOLT), X(UBEER), X(UTHMUP), X(USMIL), _______,           _______,  \
+    _______, _______, _______, _______, _______, _______, X(UBIC), X(UNERD),   X(UBUG), X(UPARTY), X(UORHEART), _______, _______, _______,  _______, \
+    _______, _______, _______, _______, _______, _______, X(UWHALE), X(UBOMB), X(UFACE_ROLLING_EYES), X(THNK), _______, _______, _______, _______,  _______, \
+    _______, _______, _______,                   _______,                             _______,_______, _______, _______, _______, _______
+>>>>>>> dcf467d6da (added unicodes)
   ),
 
 
@@ -392,6 +425,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 =======
     _______, KC_F1,     KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,   KC_F11,  KC_F12,    RESET,   KC_PSCR, \
 <<<<<<< HEAD
+<<<<<<< HEAD
     _______, LAY_COL, LAY_QWE ,  M_NAME, _______, _______, KC_MS_L, KC_MS_D, KC_MS_U, _______ ,  BL_INC, XP(SE_AA_L, SE_AA_H) , _______,              KC_INS,  \
     _______, OS_WIN , OS_LIN , VM2WIN , WIN2VM, _______, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT,   XP(SE_OE_L, SE_OE_H) ,  XP(SE_AE_L, SE_AE_H) , _______,  _______,   KC_HOME, \
 <<<<<<< HEAD
@@ -405,6 +439,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, OS_WIN , OS_LIN , VM2WIN , WIN2VM, X(UBUG), KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT,   XP(SE_OE_L, SE_OE_H) ,  XP(SE_AE_L, SE_AE_H) , _______,  _______,   KC_HOME, \
     _______, BL_TOGG, BL_DEC , X(UBIC), X(UNERD), KC_MPRV, KC_MPLY, KC_MNXT, X(UPARTY), KC_VOLD, KC_MUTE,  KC_VOLU, _______, M_CD_DOT,    KC_END,  \
 >>>>>>> 32099f0c53 (added unicode and corrected comments)
+=======
+    _______, LAY_COL, LAY_QWE ,  M_NAME, _______, _______, KC_END, KC_HOME, _______, _______,  BL_INC, XP(SE_AA_L, SE_AA_H) , _______,              KC_INS,  \
+    _______, OS_WIN , OS_LIN , VM2WIN , WIN2VM, _______, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT,   XP(SE_OE_L, SE_OE_H) ,  XP(SE_AE_L, SE_AE_H) , _______,  _______,   KC_HOME, \
+    _______, BL_TOGG, BL_DEC , _______, _______, KC_MPRV, KC_MPLY, KC_MNXT, _______, KC_VOLD, KC_MUTE,  KC_VOLU, _______, M_CD_DOT,    KC_END,  \
+>>>>>>> dcf467d6da (added unicodes)
     _______, _______, _______,                   KC_ENT,                             _______, _______,   KC_APP, _______,  _______,    _______
 >>>>>>> 408cd650dc (add mouse key)
   ),
@@ -414,9 +453,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> ccf6caf3ea (added dev)
+=======
+>>>>>>> dcf467d6da (added unicodes)
     case M_NAME:
       if (record->event.pressed) {
           SEND_STRING("Kristoffer");
@@ -446,7 +488,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
         return false;
         break;
-
     /* layout switcher */
 >>>>>>> ccf6caf3ea (added dev)
     case LAY_QWE:
@@ -461,6 +502,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
       break;
+<<<<<<< HEAD
 <<<<<<< HEAD
           case COMM:    // , | <
       if (record->event.pressed){
@@ -553,6 +595,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 =======
 
+=======
+>>>>>>> dcf467d6da (added unicodes)
     /* os switcher */
     case OS_LIN:
       set_unicode_input_mode(UC_LNX);
@@ -565,6 +609,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return true;
 }
+<<<<<<< HEAD
 
 /*
 kolla om hopp fungerar mellan win i vm
@@ -576,3 +621,5 @@ lägg till att byta input när en hoppar mellan de olika miljöerna
 =======
 */
 >>>>>>> 3b9e1ae14d (add colemak)
+=======
+>>>>>>> dcf467d6da (added unicodes)
