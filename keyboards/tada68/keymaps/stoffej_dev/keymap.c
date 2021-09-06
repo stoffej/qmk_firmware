@@ -13,6 +13,7 @@ enum layer_number {
   _EMOJI,
   _FUNCTION,
   _SWE
+<<<<<<< HEAD
 =======
   _UPPER,
 =======
@@ -20,6 +21,8 @@ enum layer_number {
 >>>>>>> dcf467d6da (added unicodes)
   _FUNCTION,
 >>>>>>> ccf6caf3ea (added dev)
+=======
+>>>>>>> f3efdd106e (removed unicode due to slow on windows)
 };
 
 enum custom_keycodes {
@@ -39,9 +42,12 @@ enum custom_keycodes {
   WIN2VM,
   LAY_QWE,
   LAY_COL,
+<<<<<<< HEAD
   OS_LIN,
   OS_WIN,
 >>>>>>> ccf6caf3ea (added dev)
+=======
+>>>>>>> f3efdd106e (removed unicode due to slow on windows)
 };
 
 
@@ -146,10 +152,13 @@ const uint32_t PROGMEM unicode_map[] = {
 
 #define SHFT_KC_A LSFT_T(KC_A)
 #define SHFT_KC_O RSFT_T(KC_O)
+<<<<<<< HEAD
 =======
 #define FN_KC_N LT(_FUNCTION, KC_N)
 #define FN_KC_T LT(_FUNCTION, KC_T)
 >>>>>>> 03ab466045 (wide and angle mod)
+=======
+>>>>>>> f3efdd106e (removed unicode due to slow on windows)
 
 #define CTLZ LCTL(KC_Z)
 #define CTLX LCTL(KC_X)
@@ -293,7 +302,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 =======
     KC_ESC , KC_1   , KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC, KC_GRV,  \
     EM_TAB , KC_Q   , KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC,          KC_DEL,  \
-    FN_BSPC, KC_A   , KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    FN_SCLN, KC_QUOT, KC_NUHS, KC_ENT,  KC_PGUP, \
+    FN_BSPC, KC_A   , KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    SW_KC_K,    KC_L,    FN_SCLN, KC_QUOT, KC_NUHS, KC_ENT,  KC_PGUP, \
     KC_LSPO, KC_NUBS, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSPC, KC_UP,   KC_PGDN, \
     KC_LCTL, KC_LGUI, KC_LALT,                   KC_SPC,                             KC_RALT, MO(_FUNCTION), KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT
   ),
@@ -316,23 +325,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |----------------------------------------------------------------|
    * |Ctrl|Win |Alt |        Space          |Alt| FN|Ctrl|Lef|Dow|Rig |
    * `----------------------------------------------------------------'
-   *
-  * [_COLEMAK] = LAYOUT_iso(
-  *   KC_ESC , KC_1   , KC_2   ,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC, KC_GRV,  \
-  *   EM_TAB , KC_Q   , KC_W   ,    KC_F,    KC_P,    KC_B,    KC_J,    KC_L,    KC_U,    KC_Y,    FN_SCLN,    KC_LBRC, KC_RBRC,          KC_DEL,  \
-  *   FN_BSPC, KC_A   , KC_R   ,    KC_S,    KC_T,    KC_G,    KC_M,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT, KC_NUHS, KC_ENT,  KC_PGUP, \
-  *   KC_LSPO, KC_NUBS, KC_Z   ,    KC_X,    KC_C,    KC_D,    KC_V,    KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSPC, KC_UP,   KC_PGDN, \
-  *   KC_LCTL, KC_LGUI, KC_LALT,                   KC_SPC,                       KC_RALT, MO(_FUNCTION), KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT
-  * ),
-
-*/
+   */
   [_COLEMAK] = LAYOUT_iso(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     KC_ESC , TD(TD_1)   , TD(TD_2)   ,    TD(TD_3),    TD(TD_4),    TD(TD_5),    TD(TD_6),    TD(TD_EQL),  TD(TD_7),    TD(TD_8),    TD(TD_9),    TD(TD_0),    TD(TD_DASH), KC_BSPC,     TD(TD_GRAV),  \
     EM_TAB , KC_Q   , KC_W   ,    KC_F,    KC_P,    KC_B,    KC_SE_LBRC, KC_J,    KC_L,    KC_U,    KC_Y,    SCLN, SLSH,              KC_DEL,  \
     FN_BSPC, SHFT_KC_A   , CTL_KC_R   ,    KC_S,    FN_KC_T,    KC_G,    KC_SE_RBRC, KC_M,    FN_KC_N,    SW_KC_E,    CTL_KC_I,    SHFT_KC_O,    QUOT, KC_ENT,      KC_PGUP, \
     KC_LSPO, KC_Z   , KC_X   ,    KC_C,    KC_D,    KC_V,    KC_SE_BSLH, KC_SE_HASH, WIN_KC_K,    KC_H,    COMM, DOT,  KC_RSPC, KC_UP,       KC_PGDN, \
+=======
+    KC_ESC , KC_1   , KC_2   ,    KC_3,    KC_4,    KC_5,    KC_6,    KC_EQL,  KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_BSPC,     KC_GRV,  \
+    EM_TAB , KC_Q   , KC_W   ,    KC_F,    KC_P,    KC_B,    KC_LBRC, KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_SLSH,              KC_DEL,  \
+    FN_BSPC, SHFT_KC_A   , CTL_KC_R   ,    KC_S,    FN_KC_T,    KC_G,    KC_RBRC, KC_M,    FN_KC_N,    SW_KC_E,    CTL_KC_I,    SHFT_KC_O,    KC_QUOT, KC_ENT,      KC_PGUP, \
+    KC_LSPO, KC_Z   , KC_X   ,    KC_C,    KC_D,    KC_V,    KC_BSLS, KC_HASH, WIN_KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_RSPC, KC_UP,       KC_PGDN, \
+>>>>>>> f3efdd106e (removed unicode due to slow on windows)
     KC_LCTL, KC_LGUI, KC_LALT,                   KC_SPC,                       KC_RALT, MO(_FUNCTION), KC_RCTL, KC_LEFT, KC_DOWN,        KC_RGHT
   ),
 
@@ -382,10 +389,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______, _______, _______,  _______,   _______, _______, _______, _______, _______,  _______, _______,  \
     _______, _______, _______, _______, _______, X(USMIL),  X(UKB), X(UCOFFEE), X(UVOLT), X(UBEER), X(UTHMUP),XP(SE_AA_L, SE_AA_H) , _______,           _______,  \
 <<<<<<< HEAD
+<<<<<<< HEAD
     _______, _______, _______, _______, _______, X(UORHEART), X(UBIC), X(UNERD),   X(UBUG), X(UPARTY), XP(SE_OE_L, SE_OE_H), XP(SE_AE_L, SE_AE_H) , _______,           _______,  _______, \
 =======
     _______, _______, _______, OS_WIN, OS_LIN, X(UORHEART), X(UBIC), X(UNERD),   X(UBUG), X(UPARTY), XP(SE_OE_L, SE_OE_H), XP(SE_AE_L, SE_AE_H) , _______,           _______,  _______, \
 >>>>>>> 03ab466045 (wide and angle mod)
+=======
+    _______, _______, _______, _______, _______, X(UORHEART), X(UBIC), X(UNERD),   X(UBUG), X(UPARTY), XP(SE_OE_L, SE_OE_H), XP(SE_AE_L, SE_AE_H) , _______,           _______,  _______, \
+>>>>>>> f3efdd106e (removed unicode due to slow on windows)
     _______, BL_TOGG, BL_DEC, _______, _______, _______, X(UWHALE), X(UBOMB), X(UFACE_ROLLING_EYES), X(THNK), _______, _______, _______, _______,  _______, \
     _______, _______, _______,                   _______,                             _______,_______, _______, _______, _______, _______
   ),
@@ -479,11 +490,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 >>>>>>> 408cd650dc (add mouse key)
 =======
     _______, KC_F1  ,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6, KC_F7  , KC_F8   , KC_F9 ,  KC_F10,   KC_F11,  KC_F12,    RESET,   KC_PSCR, \
-    _______, LAY_COL, LAY_QWE,  M_NAME, _______, _______, KC_PGUP, KC_HOME, KC_UP   , KC_END,  KC_DEL,  KC_ESC ,KC_INS ,           _______  ,  \
-    _______,  VM2WIN,  WIN2VM, KC_LSHIFT, KC_LCTRL , KC_DEL ,_______ ,KC_PGDN ,  KC_LEFT ,KC_DOWN, KC_RIGHT, KC_BSPC ,_______  , _______,   KC_HOME, \
-    _______, _______,CTLZ ,CTLX , CTLC, CTLV,KC_MPRV, KC_MPLY, KC_MNXT,  KC_VOLD, KC_MUTE,  KC_VOLU, _______, M_CD_DOT,    BL_INC,  \
+    _______, LAY_QWE, LAY_COL, M_NAME, VM2WIN, WIN2VM,_______, KC_PGUP, KC_HOME, KC_UP   , KC_END,  KC_DEL ,KC_INS ,           _______  ,  \
+    _______, _______ , _______ , KC_LSHIFT, KC_LCTRL , KC_DEL ,_______ ,KC_PGDN ,  KC_LEFT ,KC_DOWN, KC_RIGHT, KC_BSPC ,_______  , _______,   KC_HOME, \
+    _______, CTLZ ,CTLX , CTLC, CTLV,_______,KC_MPRV, KC_MPLY, KC_MNXT,  KC_VOLD, KC_MUTE,  KC_VOLU, _______, M_CD_DOT,    BL_INC,  \
     _______, _______, _______,                   KC_ENT ,                             _______, _______,   KC_APP, _______,  _______,    _______
 >>>>>>> 939dee165a (delay for OS switch)
+  ),
+
+
+  [_SWE] = LAYOUT_iso(
+    _______, _______, _______, _______, _______, _______, _______,  _______,   _______, _______, _______, _______, _______,  _______, _______,  \
+    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,_______, _______ , _______,           _______,  \
+    _______, XP(SE_AA_L, SE_AA_H), XP(SE_AE_L, SE_AE_H), XP(SE_OE_L, SE_OE_H),   _______, _______,  _______, _______, _______, _______,  _______, _______,           _______,  _______, \
+    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______, \
+    _______, _______, _______,                   _______,                             _______,_______, _______, _______, _______, _______
   ),
 };
 // clang-format on
@@ -516,8 +536,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         if (record->event.pressed) {
             SEND_STRING( SS_DOWN(X_LCTL) SS_DOWN(X_LALT) SS_UP(X_LCTL) SS_UP(X_LALT) SS_DOWN(X_LCTL) SS_DOWN(X_LGUI) SS_TAP(X_LEFT) SS_UP(X_LCTL) SS_UP(X_LGUI));
             backlight_level(3);
-            _delay_ms(1000);
-            set_unicode_input_mode(UC_WINC);
+            //_delay_ms(1500);
+            //set_unicode_input_mode(UC_WINC);
+            //_delay_ms(100);
+            //set_unicode_input_mode(UC_WINC);
+            _delay_ms(200);
+            //set_unicode_input_mode(UC_WINC);
+            //_delay_ms(100);
             backlight_level(0);
         }
         return false;
@@ -525,7 +550,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case WIN2VM:
         if (record->event.pressed) {
             SEND_STRING(SS_DOWN(X_LCTL) SS_DOWN(X_LGUI) SS_TAP(X_RIGHT) SS_UP(X_LCTL) SS_UP(X_LGUI) SS_DELAY(300) SS_TAP(X_BTN1));
-            set_unicode_input_mode(UC_LNX);
+            //set_unicode_input_mode(UC_LNX);
         }
         return false;
         break;
@@ -543,6 +568,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
       break;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           case COMM:    // , | <
@@ -647,6 +673,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       set_unicode_input_mode(UC_WINC);
       return false;
       break;
+=======
+>>>>>>> f3efdd106e (removed unicode due to slow on windows)
     }
     return true;
 }
