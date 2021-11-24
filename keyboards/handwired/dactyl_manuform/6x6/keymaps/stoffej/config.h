@@ -24,8 +24,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define MASTER_RIGHT
 
 //#define EE_HANDS
+<<<<<<< HEAD
 <<<<<<< HEAD:keyboards/handwired/dactyl_manuform/6x6/keymaps/stoffej/config.h
 #define SPLIT_HAND_PIN D1
 =======
 #define SPLIT_HAND_PIN D1
 >>>>>>> 5b8286df46 (before setting default to swedish in OS):keyboards/handwired/dactyl_manuform/6x6/keymaps/default/config.h
+=======
+#define SPLIT_HAND_PIN D1
+>>>>>>> 8a13e0efee (added new board)
