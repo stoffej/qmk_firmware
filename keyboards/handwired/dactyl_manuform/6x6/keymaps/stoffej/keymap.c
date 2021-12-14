@@ -98,27 +98,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [LAY3] = LAYOUT_6x6(
-    _______, _______, _______, WIN2VM, VM2WIN,                                              _______,  _______, _______, _______, _______,
-    _______, _______,XP(SE_AA_L, SE_AA_H), XP(SE_AE_L, SE_AE_H), XP(SE_OE_L, SE_OE_H),      _______,  _______, _______, _______, _______,
+    X(UCOFFEE), M_NAME, _______, WIN2VM, VM2WIN,                                              _______,  _______, _______, _______, _______,
+    _______, _______,XP(SE_AA_L, SE_AA_H), XP(SE_AE_L, SE_AE_H), XP(SE_OE_L, SE_OE_H),      KC_LSFT,    KC_LCTL,    KC_LALT,   KC_LGUI,    _______,
     _______, _______, _______, _______, M_CD_DOT,                                           _______,  _______, _______, _______, _______,
                       _______, _______, _______,                                            _______,  _______, _______
 ),
 
 
 [LAY4] = LAYOUT_6x6(
-    KC_LCBR,   KC_AMPR, KC_ASTR, KC_LPRN, KC_RCBR,               KC_LCBR, KC_AMPR, KC_ASTR, KC_LPRN, KC_RCBR,
-    KC_COLN,   KC_DLR,  KC_PERC, KC_CIRC, KC_PLUS,                         KC_PLUS, KC_DLR,  KC_PERC, KC_CIRC, KC_COLN,
-    KC_TILD,   KC_EXLM, KC_AT,   KC_HASH,    KC_PIPE,                 KC_PIPE, KC_EXLM, KC_AT,   KC_HASH, KC_TILD,
-                        KC_LPRN, KC_RPRN, KC_UNDS,                 KC_RPRN, _______, _______
+    KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_INS,                            _______,    _______,    _______,    _______,   _______,
+    KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_CAPS,                           KC_LSFT,    KC_LCTL,    KC_LALT,   KC_LGUI,    _______,
+    U_UND,   U_CUT,   U_CPY,   U_PST,   U_RDO,                             _______,    _______,    _______,    KC_ALGR,   _______,
+                _______,    _______,    KC_DEL,                            KC_BSPC, KC_ENT,  _______
 ),
 
 
 [LAY5] = LAYOUT_6x6(
-    KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_INS,                            _______,    _______,    _______,    _______,   _______,
-    KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_CAPS,                           _______,    KC_LSFT,    KC_LCTL,    KC_LALT,   KC_LGUI,
-    U_UND,   U_CUT,   U_CPY,   U_PST,   U_RDO,                             _______,    _______,    _______,    KC_ALGR,   _______,
-                _______,    _______,    KC_DEL,                            KC_BSPC, KC_ENT,  _______
+    KC_LCBR,   KC_AMPR, KC_ASTR, KC_LPRN, KC_RCBR,               _______, _______, _______, _______, _______,
+    KC_COLN,   KC_DLR,  KC_PERC, KC_CIRC, KC_PLUS,               KC_LSFT,    KC_LCTL,    KC_LALT,   KC_LGUI,    _______,
+    KC_TILD,   KC_EXLM, KC_AT,   KC_HASH,    KC_PIPE,            _______, _______, _______, _______, _______,
+                        KC_LPRN, KC_RPRN, KC_UNDS,               _______, _______, _______
 ),
+
 
 // [MBO] = LAYOUT_6x6(
 //     U_RDO,   U_PST,   U_CPY,   U_CUT,   U_UND,   U_RDO,   U_PST,   U_CPY,   U_CUT,   U_UND,

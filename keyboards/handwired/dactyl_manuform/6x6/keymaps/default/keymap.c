@@ -1,7 +1,7 @@
 #include QMK_KEYBOARD_H
 
 
-enum layers { BASE, MBO, MEDIA, NAV, CMD, SYM, NUM, FUN };
+enum layers { BASE, LAY1, LAY2, LAY3, LAY4, LAY5, FUN };
 
 enum custom_keycodes {
   M_NAME = SAFE_RANGE,
@@ -69,51 +69,46 @@ const uint32_t PROGMEM unicode_map[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = LAYOUT_6x6(
-    KC_Q,         KC_W,         KC_F,         KC_P,         KC_B,       KC_J, KC_L,         KC_U,         KC_Y,           KC_QUOT,
-    LGUI_T(KC_A), LALT_T(KC_R), LCTL_T(KC_S), LSFT_T(KC_T), KC_G,       KC_M, LSFT_T(KC_N), LCTL_T(KC_E), LALT_T(KC_I),   LGUI_T(KC_O),
-    KC_Z,         ALGR_T(KC_X), KC_C,         KC_D,         KC_V,       KC_K, KC_H,         KC_COMM,      ALGR_T(KC_DOT), KC_SLSH,
-                LT(FUN, KC_DEL),LT(NUM, KC_BSPC),LT(SYM, KC_ENT),       LT(CMD, KC_TAB), LT(NAV, KC_SPC), LT(MEDIA, KC_ESC)
-),
-[NAV] = LAYOUT_6x6(
-    KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_INS,         _______,    _______,    _______,    _______,    RESET,
-    KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_CAPS,        _______,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
-    U_UND,   U_CUT,   U_CPY,   U_PST,   U_RDO,          _______,    _______,    _______,    KC_ALGR, _______,
-    _______,    _______,    KC_DEL,                     KC_BSPC, KC_ENT,  _______
+    KC_Q,         KC_W,         KC_F,         KC_P,         KC_B,          KC_J, KC_L,         KC_U,         KC_Y,           KC_QUOT,
+    LGUI_T(KC_A), LALT_T(KC_R), LCTL_T(KC_S), LSFT_T(KC_T), KC_G,          KC_M, LSFT_T(KC_N), LCTL_T(KC_E), LALT_T(KC_I),   LGUI_T(KC_O),
+    KC_Z,         ALGR_T(KC_X), KC_C,         KC_D,         KC_V,          KC_K, KC_H,         KC_COMM,      ALGR_T(KC_DOT), KC_SLSH,
+    LT(FUN, KC_DEL),LT(LAY1, KC_BSPC),LT(LAY2, KC_ENT),                    LT(LAY3, KC_TAB), LT(LAY5, KC_SPC), LT(LAY4, KC_ESC)
 ),
 
-[CMD] = LAYOUT_6x6(
-    _______, _______, _______, WIN2VM, VM2WIN,         _______,  _______, _______, _______, _______,
+[LAY1] = LAYOUT_6x6(
+    _______, _______,  _______,      _______,    _______,                  KC_LBRC, KC_7,    KC_8,    KC_9,    KC_RBRC,
+    KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, _______,                           KC_EQL,  KC_4,    KC_5,    KC_6,    KC_SCLN,
+    _______,  KC_ALGR, _______,    _______,    _______,                    KC_BSLS, KC_1,    KC_2,    KC_3,    KC_GRV,
+                               _______,  _______, _______,                 KC_DOT,  KC_0,    KC_MINS
+),
+
+[LAY2] = LAYOUT_6x6(
+    _______,   _______,    _______,    _______,    _______,               KC_LCBR, KC_AMPR, KC_ASTR, KC_LPRN, KC_RCBR,
+    KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, _______,                          KC_PLUS, KC_DLR,  KC_PERC, KC_CIRC, KC_COLN,
+    _______,    KC_ALGR, _______,    _______,    _______,                 KC_PIPE, KC_EXLM, KC_AT,   KC_HASH, KC_TILD,
+                            _______,    KC_UNDS, KC_LPRN,                 KC_RPRN, _______, _______
+),
+
+[LAY3] = LAYOUT_6x6(
+    _______, _______, _______, WIN2VM, VM2WIN,                                              _______,  _______, _______, _______, _______,
     _______, _______,XP(SE_AA_L, SE_AA_H), XP(SE_AE_L, SE_AE_H), XP(SE_OE_L, SE_OE_H),      _______,  _______, _______, _______, _______,
-    _______, _______, _______, _______, M_CD_DOT,       _______,  _______, _______, _______, _______,
-                      _______, _______, _______,       _______,  _______, _______
+    _______, _______, _______, _______, M_CD_DOT,                                           _______,  _______, _______, _______, _______,
+                      _______, _______, _______,                                            _______,  _______, _______
 ),
 
-[MEDIA] = LAYOUT_6x6(
-    RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI, RGB_TOG, _______,    _______,    _______,    _______,    RESET,
-    KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, _______,    _______,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
-    _______,    _______,    _______,    _______,    _______,    _______,    _______,    _______,    KC_ALGR, _______,
-    _______,    _______,    KC_MUTE, KC_MPLY, KC_MSTP, _______
+[LAY4] = LAYOUT_6x6(
+    RGB_MOD,    RGB_HUI, RGB_SAI, RGB_VAI, RGB_TOG,                         _______,    _______,    _______,    _______,    _______,
+    KC_MPRV,    KC_VOLD, KC_VOLU, KC_MNXT, _______,                         _______,    KC_LSFT,    KC_LCTL,    KC_LALT,    KC_LGUI,
+    _______,    _______, _______, _______, _______,                         _______,    _______,    _______,    KC_ALGR, _______,
+                         _______, _______, KC_MUTE,                                        KC_MPLY, KC_MSTP, _______
 ),
 
-[MBO] = LAYOUT_6x6(
-    U_RDO,   U_PST,   U_CPY,   U_CUT,   U_UND,   U_RDO,   U_PST,   U_CPY,   U_CUT,   U_UND,
-    KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_TRNS, KC_TRNS, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
-    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-    _______,    _______,    KC_BTN2, KC_BTN3, KC_BTN1, KC_BTN1
-),
 
-[NUM] = LAYOUT_6x6(
-    RESET,   _______,    _______,    _______,    _______,    KC_LBRC, KC_7,    KC_8,    KC_9,    KC_RBRC,
-    KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, _______,    KC_EQL,  KC_4,    KC_5,    KC_6,    KC_SCLN,
-    _______,    KC_ALGR, _______,    _______,    _______,    KC_BSLS, KC_1,    KC_2,    KC_3,    KC_GRV,
-    _______,    KC_MINS, KC_0,    KC_DOT,  _______,    _______
-),
-
-[SYM] = LAYOUT_6x6(
-    RESET,   _______,    _______,    _______,    _______,    KC_LCBR, KC_AMPR, KC_ASTR, KC_LPRN, KC_RCBR,
-    KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, _______,    KC_PLUS, KC_DLR,  KC_PERC, KC_CIRC, KC_COLN,
-    _______,    KC_ALGR, _______,    _______,    _______,    KC_PIPE, KC_EXLM, KC_AT,   KC_HASH, KC_TILD,
-    _______,    KC_UNDS, KC_LPRN, KC_RPRN, _______,    _______
+[LAY5] = LAYOUT_6x6(
+    KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_INS,                            _______,    _______,    _______,    _______,    RESET,
+    KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_CAPS,                           _______,    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+    U_UND,   U_CUT,   U_CPY,   U_PST,   U_RDO,                             _______,    _______,    _______,    KC_ALGR, _______,
+                _______,    _______,    KC_DEL,                            KC_BSPC, KC_ENT,  _______
 ),
 
 [FUN] = LAYOUT_6x6(
@@ -122,7 +117,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,    KC_ALGR, _______,    _______,    _______,    KC_PAUS, KC_F1,   KC_F2,   KC_F3,   KC_F10,
     _______,    KC_TAB,  KC_SPC,  KC_APP,  _______,    _______
 )
-
+// [MBO] = LAYOUT_6x6(
+//     U_RDO,   U_PST,   U_CPY,   U_CUT,   U_UND,   U_RDO,   U_PST,   U_CPY,   U_CUT,   U_UND,
+//     KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, KC_TRNS, KC_TRNS, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+//     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+//     _______,    _______,    KC_BTN2, KC_BTN3, KC_BTN1, KC_BTN1
+// ),
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -167,3 +167,28 @@ switch (keycode) {
 
     return true;
 }
+
+
+
+
+// SEND_STRING(".............................................\n"
+//             "...#######################################...\n"
+//             "...#######################################...\n"
+//             "...###'''##'''##'''##'''##'''##'''##'''###...\n"
+//             "...###...##...##...##...##...##...##...###...\n"
+//             "...#######################################...\n"
+//             "...###'''##'''##'''##'''##'''##'''##'''###...\n"
+//             "...###...##...##...##...##...##...##...###...\n"
+//             "...#######################################...\n"
+//             "...######'''''''''''''''''''''''''''######...\n"
+//             "...######...........................######...\n"
+//             "...#######################################...\n"
+//             "...#######################################...\n"
+//             ".................__............._............\n"
+//             "................/ /............| |...........\n"
+//             "...... _ __ .../ /.._ __ ___...| |.__........\n"
+//             "......| '__|../ /..| '_ ` _ \\..| |/ /........\n"
+//             "......| |..../ /...| | | | | |.|   < ........\n"
+//             "......|_|.../_/....|_| |_| |_|.|_|\\_\\........\n"
+//             ".............................................\n"
+//             );
