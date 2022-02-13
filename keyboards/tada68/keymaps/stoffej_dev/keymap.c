@@ -1,8 +1,12 @@
 #include QMK_KEYBOARD_H
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "keymap_swedish.h"
 =======
 >>>>>>> ccf6caf3ea (added dev)
+=======
+#include "keymap_swedish.h"
+>>>>>>> dfc172e658 (update layout)
 
 
 enum layer_number {
@@ -29,17 +33,23 @@ enum custom_keycodes {
   M_NAME = SAFE_RANGE,
   M_CD_DOT,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dfc172e658 (update layout)
   COMM,     // , | <
   DOT,      // . | >
   SLSH,     // / | ?
   SCLN,     // ; | :
   QUOT,     // ' | "
   KC_SE_MYEQUAL,  // 0 | *
+<<<<<<< HEAD
   LAY_QWE,
   LAY_COL,
 =======
   VM2WIN,
   WIN2VM,
+=======
+>>>>>>> dfc172e658 (update layout)
   LAY_QWE,
   LAY_COL,
 <<<<<<< HEAD
@@ -89,10 +99,13 @@ enum unicode_names {
 };
 
 
+<<<<<<< HEAD
 =======
 };
 
 >>>>>>> ccf6caf3ea (added dev)
+=======
+>>>>>>> dfc172e658 (update layout)
 const uint32_t PROGMEM unicode_map[] = {
   [SE_AA_H] = 0x00C5,
   [SE_AE_H] = 0x00C4,
@@ -245,6 +258,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 };
 
 
+<<<<<<< HEAD
 =======
 };
 
@@ -254,6 +268,8 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 =======
 #define EM_TAB LT(_EMOJI,KC_TAB)
 >>>>>>> dcf467d6da (added unicodes)
+=======
+>>>>>>> dfc172e658 (update layout)
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -262,6 +278,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 <<<<<<< HEAD
   /* Keymap _QWERTY: Base Qwerty
    * ,----------------------------------------------------------------.---
+<<<<<<< HEAD
 =======
   /* Keymap _BL: (Base Layer) Default Layer qwerty
 =======
@@ -269,6 +286,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 >>>>>>> 32099f0c53 (added unicode and corrected comments)
    * ,----------------------------------------------------------------.
 >>>>>>> ccf6caf3ea (added dev)
+=======
+>>>>>>> dfc172e658 (update layout)
    * |Esc | 1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  +|  '|Backspa |  ´|
    * |----------------------------------------------------------------|
    * |Tab  |  Q|  W|  E|  R|  T|  Y|  U|  I|  O|  P|  Å|  ¨| Ent|Del |
@@ -281,6 +300,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `----------------------------------------------------------------'
    */
   [_QWERTY] = LAYOUT_iso(
+<<<<<<< HEAD
 <<<<<<< HEAD
     KC_ESC , TD(TD_1)   , TD(TD_2),  TD(TD_3),    TD(TD_4),   TD(TD_5),    TD(TD_6),   TD(TD_7),    TD(TD_8),    TD(TD_9),    TD(TD_0),    KC_MINS , TD(TD_DASH),  KC_BSPC, TD(TD_GRAV),  \
     EM_TAB , KC_Q   , KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC,          KC_DEL,  \
@@ -301,9 +321,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |Shif| \|  Z|  X|  C|  D|  V|  K|  H|  ,|  .|  / | Shift| Up|PgDn|
 =======
     KC_ESC , KC_1   , KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC, KC_GRV,  \
+=======
+    KC_ESC , TD(TD_1)   , TD(TD_2),  TD(TD_3),    TD(TD_4),   TD(TD_5),    TD(TD_6),   TD(TD_7),    TD(TD_8),    TD(TD_9),    TD(TD_0),    KC_MINS , TD(TD_DASH),  KC_BSPC, TD(TD_GRAV),  \
+>>>>>>> dfc172e658 (update layout)
     EM_TAB , KC_Q   , KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC,          KC_DEL,  \
-    FN_BSPC, KC_A   , KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    SW_KC_K,    KC_L,    FN_SCLN, KC_QUOT, KC_NUHS, KC_ENT,  KC_PGUP, \
-    KC_LSPO, KC_NUBS, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSPC, KC_UP,   KC_PGDN, \
+    FN_BSPC, KC_A   , KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    SW_KC_K,    KC_L,    SCLN, QUOT, KC_NUHS, KC_ENT,  KC_PGUP, \
+    KC_LSPO, KC_NUBS, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    COMM,  DOT,  SLSH, KC_RSPC, KC_UP,   KC_PGDN, \
     KC_LCTL, KC_LGUI, KC_LALT,                   KC_SPC,                             KC_RALT, MO(_FUNCTION), KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT
   ),
 
@@ -330,16 +353,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dfc172e658 (update layout)
     KC_ESC , TD(TD_1)   , TD(TD_2)   ,    TD(TD_3),    TD(TD_4),    TD(TD_5),    TD(TD_6),    TD(TD_EQL),  TD(TD_7),    TD(TD_8),    TD(TD_9),    TD(TD_0),    TD(TD_DASH), KC_BSPC,     TD(TD_GRAV),  \
     EM_TAB , KC_Q   , KC_W   ,    KC_F,    KC_P,    KC_B,    KC_SE_LBRC, KC_J,    KC_L,    KC_U,    KC_Y,    SCLN, SLSH,              KC_DEL,  \
     FN_BSPC, SHFT_KC_A   , CTL_KC_R   ,    KC_S,    FN_KC_T,    KC_G,    KC_SE_RBRC, KC_M,    FN_KC_N,    SW_KC_E,    CTL_KC_I,    SHFT_KC_O,    QUOT, KC_ENT,      KC_PGUP, \
     KC_LSPO, KC_Z   , KC_X   ,    KC_C,    KC_D,    KC_V,    KC_SE_BSLH, KC_SE_HASH, WIN_KC_K,    KC_H,    COMM, DOT,  KC_RSPC, KC_UP,       KC_PGDN, \
+<<<<<<< HEAD
 =======
     KC_ESC , KC_1   , KC_2   ,    KC_3,    KC_4,    KC_5,    KC_6,    KC_EQL,  KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_BSPC,     KC_GRV,  \
     EM_TAB , KC_Q   , KC_W   ,    KC_F,    KC_P,    KC_B,    KC_LBRC, KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_SLSH,              KC_DEL,  \
     FN_BSPC, SHFT_KC_A   , CTL_KC_R   ,    KC_S,    FN_KC_T,    KC_G,    KC_RBRC, KC_M,    FN_KC_N,    SW_KC_E,    CTL_KC_I,    SHFT_KC_O,    KC_QUOT, KC_ENT,      KC_PGUP, \
     KC_LSPO, KC_Z   , KC_X   ,    KC_C,    KC_D,    KC_V,    KC_BSLS, KC_HASH, WIN_KC_K,    KC_H,    KC_COMM, KC_DOT,  KC_RSPC, KC_UP,       KC_PGDN, \
 >>>>>>> f3efdd106e (removed unicode due to slow on windows)
+=======
+>>>>>>> dfc172e658 (update layout)
     KC_LCTL, KC_LGUI, KC_LALT,                   KC_SPC,                       KC_RALT, MO(_FUNCTION), KC_RCTL, KC_LEFT, KC_DOWN,        KC_RGHT
   ),
 
@@ -490,7 +519,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 >>>>>>> 408cd650dc (add mouse key)
 =======
     _______, KC_F1  ,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6, KC_F7  , KC_F8   , KC_F9 ,  KC_F10,   KC_F11,  KC_F12,    RESET,   KC_PSCR, \
-    _______, LAY_QWE, LAY_COL, M_NAME, VM2WIN, WIN2VM,_______, KC_PGUP, KC_HOME, KC_UP   , KC_END,  KC_DEL ,KC_INS ,           _______  ,  \
+    _______, LAY_QWE, LAY_COL, M_NAME, _______, _______,_______, KC_PGUP, KC_HOME, KC_UP   , KC_END,  KC_DEL ,KC_INS ,           _______  ,  \
     _______, _______ , _______ , KC_LSHIFT, KC_LCTRL , KC_DEL ,_______ ,KC_PGDN ,  KC_LEFT ,KC_DOWN, KC_RIGHT, KC_BSPC ,_______  , _______,   KC_HOME, \
     _______, CTLZ ,CTLX , CTLC, CTLV,_______,KC_MPRV, KC_MPLY, KC_MNXT,  KC_VOLD, KC_MUTE,  KC_VOLU, _______, M_CD_DOT,    BL_INC,  \
     _______, _______, _______,                   KC_ENT ,                             _______, _______,   KC_APP, _______,  _______,    _______
@@ -530,6 +559,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       return false;
       break;
 <<<<<<< HEAD
+<<<<<<< HEAD
      /* layout switcher */
 =======
     case VM2WIN:
@@ -556,6 +586,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         break;
     /* layout switcher */
 >>>>>>> ccf6caf3ea (added dev)
+=======
+     /* layout switcher */
+>>>>>>> dfc172e658 (update layout)
     case LAY_QWE:
       if (record->event.pressed) {
         set_single_persistent_default_layer(_QWERTY);
@@ -571,6 +604,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dfc172e658 (update layout)
           case COMM:    // , | <
       if (record->event.pressed){
         if (get_mods() & MOD_BIT(KC_LSHIFT) || get_mods() & MOD_BIT(KC_RSHIFT)){
@@ -658,6 +694,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       return false;
       break;
           }
+<<<<<<< HEAD
     return true;
 }
 =======
@@ -676,6 +713,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 =======
 >>>>>>> f3efdd106e (removed unicode due to slow on windows)
     }
+=======
+>>>>>>> dfc172e658 (update layout)
     return true;
 }
 <<<<<<< HEAD

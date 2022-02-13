@@ -10,12 +10,18 @@
 #define PRODUCT_ID   0x0000
 #define DEVICE_VER   0x0001
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define MANUFACTURER torbjorn rasmusson
 #define PRODUCT      toddis_keyboard_split
 
 =======
 #define MANUFACTURER torbjorn rasmussonvvvvvvvvde PRODUCT      toddis_keyboard_split
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+#define MANUFACTURER torbjorn rasmusson
+#define PRODUCT      toddis_keyboard_split
+ 
+>>>>>>> dfc172e658 (update layout)
 
 /* key matrix size */
 /* Rows are doubled up */
@@ -43,6 +49,7 @@
 #define SOFT_SERIAL_PIN D1 /* change when adding an oled display collide with i2c */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define SPLIT_USB_DETECT
 
 #define RGB_DI_PIN D5
@@ -54,6 +61,12 @@
 #define RGBLED_NUM 4
 #define RGBLIGHT_SPLIT
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+#define SPLIT_USB_DETECT
+
+#define RGB_DI_PIN D5
+#define RGBLED_NUM 4
+>>>>>>> dfc172e658 (update layout)
 #define RGBLED_SPLIT { 2, 2 }
 
 #define RGBLIGHT_LAYERS
@@ -67,10 +80,13 @@
 
 #define UNICODE_SELECTED_MODES UC_WINC
 
+<<<<<<< HEAD
 =======
 #define RGBLIGHT_LIMIT_VAL 200
 
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+>>>>>>> dfc172e658 (update layout)
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
 

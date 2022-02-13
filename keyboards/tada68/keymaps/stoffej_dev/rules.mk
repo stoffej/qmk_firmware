@@ -32,8 +32,13 @@ RGBLIGHT_ENABLE = no        # Enable WS2812 RGB underlight.
 SLEEP_LED_ENABLE = no       # Breathing sleep LED during USB suspend
 AUTO_SHIFT_ENABLE = no
 <<<<<<< HEAD
+<<<<<<< HEAD
 UNICODEMAP_ENABLE = yes
 TAP_DANCE_ENABLE = yes
 =======
 UNICODEMAP_ENABLE = yes
 >>>>>>> ccf6caf3ea (added dev)
+=======
+UNICODEMAP_ENABLE = yes
+TAP_DANCE_ENABLE = yes
+>>>>>>> dfc172e658 (update layout)

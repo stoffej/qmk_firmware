@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Copyright 2021 torbjorn rasmusson (@torbjorn rasmuss
 // SPDX-License-Identifier: GPL-2.0-or-later
 
@@ -23,18 +24,31 @@ enum custom_keycodes {
 enum unicode_names {
 =======
 // Copyright 2021 torbjorn rasmusson (@torbjorn rasmusson)
+=======
+// Copyright 2021 torbjorn rasmusson (@torbjorn rasmuss
+>>>>>>> dfc172e658 (update layout)
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H
+#include "keymap_swedish.h"
 
-enum layers { BASE, LAY0, LAY1, LAY2, LAY3, LAY4, LAY5 };
+
+enum layers { BASE, LAY0, LAY1, LAY2, LAY3, LAY4, LAY5, LAY6 };
 
 enum custom_keycodes {
   M_NAME = SAFE_RANGE,
+  COMM,     // , | <
+  DOT,      // . | >
+  SLSH,     // / | ?
+  SCLN,     // ; | :
+  QUOT,     // ' | "
   M_CD_DOT,
+  M_GIT_ST,
 };
 
+
 enum unicode_names {
+<<<<<<< HEAD
   SE_AA_H,
   SE_AE_H,
   SE_OE_H,
@@ -42,6 +56,8 @@ enum unicode_names {
   SE_AE_L,
   SE_OE_L,
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+>>>>>>> dfc172e658 (update layout)
   UKB,
   UCOFFEE,
   UVOLT,
@@ -56,6 +72,7 @@ enum unicode_names {
   UWHALE,
   UBOMB,
   UFACE_ROLLING_EYES,
+<<<<<<< HEAD
 <<<<<<< HEAD
   THNK,
   PARTY,
@@ -75,6 +92,13 @@ const uint32_t PROGMEM unicode_map[] = {
   [SE_AE_L] = 0x00E4,
   [SE_OE_L] = 0x00F6,
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+  THNK,
+  PARTY
+};
+
+const uint32_t PROGMEM unicode_map[] = {
+>>>>>>> dfc172e658 (update layout)
   [UKB]     = 0x2328,   // ⌨
   [UCOFFEE] = 0x2615,   // ☕
   [UVOLT]   = 0x26A1,   // ⚡
@@ -90,6 +114,7 @@ const uint32_t PROGMEM unicode_map[] = {
   [UBOMB] = 0x1F4A3,    // 💣
   [UFACE_ROLLING_EYES] = 0x1F644, // 🙄
   [THNK] = 0x1F914, // 🤔
+<<<<<<< HEAD
 <<<<<<< HEAD
   [PARTY] = 0x1F973, // 🥳
   [O_LINE] = 0x235C, // ⍜
@@ -133,12 +158,53 @@ const uint32_t PROGMEM unicode_map[] = {
 #define KC_SE_PIPE RALT(KC_NUBS)       // |
 
 =======
+=======
+  [PARTY] = 0x1F973, // 🥳
+>>>>>>> dfc172e658 (update layout)
 };
-#define FN_BSPC LT(_FUNCTION, KC_BSPC)
-#define FN_SCLN LT(_FUNCTION, KC_SCLN)
 
+<<<<<<< HEAD
 #define WIN_KC_K WIN_T(KC_K)
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+// SWEDISH LETTERS AND SYMBOLS
+// Letters
+#define KC_SE_AA KC_LBRC               // Å
+#define KC_SE_AE KC_QUOT               // Ä
+#define KC_SE_OE KC_SCLN               // Ö
+#define KC_SE_QUO KC_BSLS              // '
+#define KC_SE_COL S(KC_DOT)            // :
+#define KC_SE_SEMI S(KC_COMM)          // ;
+#define KC_SE_EXCL S(KC_1)             // !
+#define KC_SE_DQUO S(KC_2)             // "
+#define KC_SE_HASH S(KC_3)             // #
+#define KC_SE_PERC S(KC_5)             // %
+#define KC_SE_AMPR S(KC_6)             // &
+#define KC_SE_SLSH S(KC_7)             // /
+#define KC_SE_LPRN S(KC_8)             // (
+#define KC_SE_RPRN S(KC_9)             // )
+#define KC_SE_EQAL S(KC_0)             // =
+#define KC_SE_CIRC S(KC_RBRACKET)      // ^
+#define KC_SE_AT RALT(KC_2)            // @
+#define KC_SE_DLR RALT(KC_4)           // $
+#define KC_SE_LCBR RALT(KC_7)          // {
+#define KC_SE_LBRC RALT(KC_8)          // [
+#define KC_SE_RBRC RALT(KC_9)          // ]
+#define KC_SE_RCBR RALT(KC_0)          // }
+#define KC_SE_TILD RALT(KC_RBRACKET)   // ~
+#define KC_SE_DIAE KC_RBRACKET         // ¨
+#define KC_SE_ACUT KC_EQL              // ´
+#define KC_SE_MINS KC_SLASH            // -
+#define KC_SE_GRAV KC_PLUS             // `
+#define KC_SE_LESS KC_NUBS             // <
+#define KC_SE_MORE S(KC_NUBS)          // >
+#define KC_SE_PLUS KC_MINS             // +
+#define KC_SE_ASTR S(KC_BSLS)          // *
+#define KC_SE_QUES S(KC_MINS)          // ?
+#define KC_SE_BSLH RALT(KC_MINS)       /* \ */
+#define KC_SE_PIPE RALT(KC_NUBS)       // |
+
+>>>>>>> dfc172e658 (update layout)
 
 #define CTL_KC_I RCTL_T(KC_I)
 #define CTL_KC_R LCTL_T(KC_R)
@@ -204,6 +270,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //  / _)/_| ( (_
 // /(_)(  |__)/__
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     [BASE] = LAYOUT(
     // left hand
@@ -218,19 +285,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_K,  KC_H, COMM, DOT, SLSH, KC_LWIN,
     LT(LAY3, KC_ENT),  LT(LAY4, KC_SPC ), LT(LAY5, KC_LWIN )
 =======
+=======
+
+>>>>>>> dfc172e658 (update layout)
     [BASE] = LAYOUT(
     // left hand
-    _______,  KC_Q, KC_W, KC_F, KC_P, KC_B,
-    _______,  SHFT_KC_A, CTL_KC_R, KC_S, KC_T, KC_G,
-    _______,  KC_Z, KC_X, KC_C, KC_D, KC_V,
-    	        LT(LAY0, KC_DEL),LT(LAY1, KC_BSPC),LT(LAY2, KC_ENT),
+    KC_ESC,  KC_Q, KC_W, KC_F, KC_P, KC_B,
+    KC_LALT,  SHFT_KC_A, CTL_KC_R, KC_S, KC_T, KC_G,
+    KC_LWIN,  KC_Z, KC_X, KC_C, KC_D, KC_V,
+      LT(LAY0, KC_BSPC ),LT(LAY1, KC_DEL ),LT(LAY2, KC_TAB),
 
     // right hand
+<<<<<<< HEAD
     KC_J,  KC_L, KC_U, KC_Y, KC_SCLN, _______,
     KC_M,  KC_N, KC_E, CTL_KC_I, SHFT_KC_O, _______,
     KC_K,  KC_H, KC_COMM, ALGR_T(KC_DOT), KC_SLSH, _______,
     LT(LAY3, KC_TAB),  LT(LAY4, KC_SPC), LT(LAY5, KC_ESC)
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+    KC_J,  KC_L, KC_U, KC_Y, SCLN, QUOT,
+    KC_M,  KC_N, KC_E, CTL_KC_I, SHFT_KC_O, KC_RALT,
+    KC_K,  KC_H, COMM, DOT, SLSH, KC_LWIN,
+    LT(LAY3, KC_ENT),  LT(LAY4, KC_SPC ), LT(LAY5, KC_LWIN )
+>>>>>>> dfc172e658 (update layout)
     ),
 //      _        __
 //  /  /_|(__/  /  )
@@ -241,6 +318,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RESET,  _______, _______, _______, _______, _______,
     _______,  KC_LSPO, KC_LCTL, KC_LALT, _______, _______,
     _______,  _______, _______, _______, _______, _______,
+<<<<<<< HEAD
 <<<<<<< HEAD
     _______, _______, _______,
 
@@ -258,6 +336,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_BSLS,  KC_1, KC_2, KC_3, KC_GRV, _______,
     KC_DOT,  KC_0, KC_MINS
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+    _______, _______, _______,
+
+    // right hand
+    KC_SE_PLUS ,  KC_7, KC_8, KC_9, KC_SE_BSLH, _______,
+    KC_SE_MINS,  KC_4, KC_5, KC_6, _______, _______,
+    KC_SE_EQAL,  KC_1, KC_2, KC_3, KC_SE_GRAV, _______,
+     KC_SE_LPRN,  KC_0, KC_SE_RPRN
+>>>>>>> dfc172e658 (update layout)
     ),
 //      _
 //  /  /_|(__/ -/
@@ -266,10 +353,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [LAY1] = LAYOUT(
     // left hand
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dfc172e658 (update layout)
     _______,  _______, _______, _______,_______ ,_______ ,
     _______,  KC_LSPO, KC_LCTL, KC_LALT,_______ , _______,
     _______,  _______, _______, _______,_______, _______,
     _______, _______, _______,
+<<<<<<< HEAD
 
     // right hand
     KC_PGUP, KC_HOME, KC_UP, KC_END, KC_INS, _______,
@@ -283,20 +374,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  KC_LSPO, KC_LCTL, KC_LALT, _______, _______,
     _______,  _______, _______, _______, _______, _______,
     	               _______, _______, _______,
+=======
+>>>>>>> dfc172e658 (update layout)
 
     // right hand
-    U_RDO,  U_PST, KC_UP, U_CPY, U_UND, _______,
-    KC_M,  KC_LEFT, KC_DOWN, KC_RGHT, _______, _______,
-    KC_HOME,  KC_PGDN, KC_PGUP, KC_END, KC_INS, _______,
-    KC_ENT,  KC_BSPC, KC_DEL
+    KC_PGUP, KC_HOME, KC_UP, KC_END, KC_INS, _______,
+    KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, M_GIT_ST, _______,
+    U_CPY, U_CUT, U_PST, U_RDO ,U_UND, M_CD_DOT,
+    KC_SE_LCBR,  _______, KC_SE_RCBR
     ),
+<<<<<<< HEAD
 //      _       _
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+//      _
+>>>>>>> dfc172e658 (update layout)
 //  /  /_|(__/  _)
 // (__(  | /   /__
 
     [LAY2] = LAYOUT(
     // left hand
+<<<<<<< HEAD
 <<<<<<< HEAD
     _______,  _______, _______, _______, KC_SE_DQUO, _______,
     _______,  KC_LSPO, KC_LCTL, KC_LALT, KC_SE_DIAE, KC_SE_ACUT,
@@ -308,17 +406,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_SE_TILD, KC_SE_EXCL, KC_SE_AT, KC_SE_HASH, KC_SE_PIPE, _______,
     KC_SE_LBRC, KC_SE_MINS, KC_SE_RBRC
 =======
+=======
+    _______,  _______, _______, _______, KC_SE_DQUO, _______,
+    _______,  KC_LSPO, KC_LCTL, KC_LALT, KC_SE_DIAE, KC_SE_ACUT,
+>>>>>>> dfc172e658 (update layout)
     _______,  _______, _______, _______, _______, _______,
-    _______,  KC_LSPO, KC_LCTL, KC_LALT, _______, _______,
-    _______,  _______, _______, _______, _______, _______,
-    	               _______, _______, _______,
-
+    _______, _______, _______,
     // right hand
+<<<<<<< HEAD
     _______,  KC_F7, KC_F8, KC_F9, _______, _______,
     _______,  KC_F4, KC_F5, KC_F6, _______, _______,
     _______,  KC_F1, KC_F2, KC_F3, _______, _______,
     KC_TAB,  KC_SPC, KC_ESC
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+    KC_SE_QUO,  KC_SE_AMPR, KC_SE_ASTR, _______, _______, _______,
+    KC_SE_COL,  KC_SE_DLR,  KC_SE_PERC, KC_SE_CIRC, _______, _______,
+    KC_SE_TILD, KC_SE_EXCL, KC_SE_AT, KC_SE_HASH, KC_SE_PIPE, _______,
+    KC_SE_LBRC, KC_SE_MINS, KC_SE_RBRC
+>>>>>>> dfc172e658 (update layout)
     ),
 //      _       _
 //  /  /_|(__/  _)
@@ -327,10 +433,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [LAY3] = LAYOUT(
     // left hand
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dfc172e658 (update layout)
     _______,  _______, _______, KC_MUTE, _______, KC_VOLU,
     _______,  _______, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLD,
     _______,  _______, _______, _______, _______, _______,
     	               _______, _______, _______,
+<<<<<<< HEAD
     // right hand
     _______,KC_F9, KC_F10, KC_F11, KC_F12, _______,
     _______,KC_F5, KC_F6 , KC_F7 , KC_F8 , _______,
@@ -349,6 +459,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  _______, _______, _______, _______, _______,
     	               _______, _______, _______
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+    // right hand
+    _______,KC_F9, KC_F10, KC_F11, KC_F12, _______,
+    _______,KC_F5, KC_F6 , KC_F7 , KC_F8 , _______,
+    _______,KC_F1, KC_F2 , KC_F3 , KC_F4 , _______,
+    KC_TAB,  KC_SPC, KC_ESC
+
+>>>>>>> dfc172e658 (update layout)
     ),
 //      _
 //  /  /_|(__/ (_/
@@ -357,10 +475,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [LAY4] = LAYOUT(
     // left hand
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dfc172e658 (update layout)
     _______,  _______, _______, _______, _______, _______,
     _______,  _______, KC_SE_AA, KC_SE_AE, KC_SE_OE, _______,
     _______,  _______, _______, _______, _______, _______,
     	               _______, _______, _______,
+<<<<<<< HEAD
 
     // right handö
 =======
@@ -368,6 +490,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_A,  KC_A, KC_R, KC_S, KC_T, KC_G,
     KC_A,  KC_Z, KC_X, KC_C, KC_D, _______,
     	               KC_DEL, KC_BSPC, KC_ENT,
+=======
+>>>>>>> dfc172e658 (update layout)
 
     // right hand
 >>>>>>> 09158b691f (added rgb for layers)
@@ -414,9 +538,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 =======
     X(USMIL),  X(UKB), X(UCOFFEE), X(UVOLT), X(UBEER), X(UTHMUP),
-    _______,  _______, XP(SE_AA_L, SE_AA_H), XP(SE_AE_L, SE_AE_H), XP(SE_OE_L, SE_OE_H), KC_G,
-    _______,   X(UORHEART), X(UBIC), X(UNERD),   X(UBUG), X(UPARTY),
-    	               _______, _______, _______,
+    X(THNK),  X(PARTY), KC_SE_AA, KC_SE_AE, KC_SE_OE, TG(LAY6),
+    X(UBOMB),   X(UORHEART), X(UBIC), X(UNERD),   X(UBUG), X(UPARTY),
+    _______, _______, _______,
 
     // right hand
     _______,  _______, _______, _______, _______, RESET,
@@ -425,7 +549,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,  _______, _______
     ),
 
+<<<<<<< HEAD
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+//    LAY 6
+
+    [LAY6] = LAYOUT(
+    // left hand
+    _______,  KC_PGUP, _______, KC_UP, _______, _______,
+    _______,  KC_PGDN, KC_LEFT, KC_DOWN , KC_RGHT, TG(LAY6),
+    _______,  _______, _______, _______, _______, _______,
+    _______,  _______, _______,
+
+    // right hand
+    KC_SE_PLUS,  KC_7, KC_8, KC_9, _______, _______,
+    KC_SE_MINS,  KC_4, KC_5, KC_6, _______, _______,
+    KC_SE_EQAL,  KC_1, KC_2, KC_3, _______, _______,
+    _______,  KC_0, _______
+    )
+>>>>>>> dfc172e658 (update layout)
 
 };
 
@@ -448,6 +590,9 @@ switch (keycode) {
       return false;
       break;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dfc172e658 (update layout)
     case M_GIT_ST:
       if (record->event.pressed) {
           SEND_STRING("git status"SS_TAP(X_ENTER)"");
@@ -528,18 +673,24 @@ switch (keycode) {
       return false;
       break;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+>>>>>>> dfc172e658 (update layout)
     }
     return true;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+>>>>>>> dfc172e658 (update layout)
 const rgblight_segment_t PROGMEM my_base_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 		{0,4,HSV_OFF}
 	);
@@ -553,6 +704,7 @@ const rgblight_segment_t PROGMEM my_layer1_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 	);
 
 const rgblight_segment_t PROGMEM my_layer2_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+<<<<<<< HEAD
 <<<<<<< HEAD
 		{0,4,HSV_BLUE}
 	);
@@ -573,20 +725,30 @@ const rgblight_segment_t PROGMEM my_layer6_layer[] = RGBLIGHT_LAYER_SEGMENTS(
 		{0,4,HSV_TURQUOISE}
 =======
 		{0,2,HSV_BLUE}
+=======
+		{0,4,HSV_BLUE}
+>>>>>>> dfc172e658 (update layout)
 	);
 
-
 const rgblight_segment_t PROGMEM my_layer3_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-		{2,2,HSV_PURPLE}
+		{0,4,HSV_PURPLE}
 	);
 
 const rgblight_segment_t PROGMEM my_layer4_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-		{2,2,HSV_TURQUOISE}
+		{0,4,HSV_TURQUOISE}
 	);
 
 const rgblight_segment_t PROGMEM my_layer5_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+<<<<<<< HEAD
 		{2,2,HSV_RED}
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+		{0,4,HSV_RED}
+	);
+
+const rgblight_segment_t PROGMEM my_layer6_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+		{0,4,HSV_TURQUOISE}
+>>>>>>> dfc172e658 (update layout)
 	);
 
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
@@ -597,11 +759,16 @@ const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
 		my_layer3_layer,
 		my_layer4_layer,
 <<<<<<< HEAD
+<<<<<<< HEAD
 		my_layer5_layer,
 		my_layer6_layer
 =======
 		my_layer5_layer
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+		my_layer5_layer,
+		my_layer6_layer
+>>>>>>> dfc172e658 (update layout)
 	);
 
 //Set the appropriate layer color
@@ -614,9 +781,13 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     rgblight_set_layer_state(5, layer_state_cmp(state, LAY4));
     rgblight_set_layer_state(6, layer_state_cmp(state, LAY5));
 <<<<<<< HEAD
+<<<<<<< HEAD
     rgblight_set_layer_state(7, layer_state_cmp(state, LAY6));
 =======
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+    rgblight_set_layer_state(7, layer_state_cmp(state, LAY6));
+>>>>>>> dfc172e658 (update layout)
     return state;
 }
 
@@ -624,7 +795,11 @@ void keyboard_post_init_user(void) {
 	//Enable the LED layers
 	rgblight_layers = my_rgb_layers;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+}
+>>>>>>> dfc172e658 (update layout)
