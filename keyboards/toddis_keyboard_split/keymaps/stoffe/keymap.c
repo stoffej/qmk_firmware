@@ -18,6 +18,7 @@ enum custom_keycodes {
   QUOT,     // ' | "
   M_CD_DOT,
   M_GIT_ST,
+  O_LINECMD,
 };
 
 
@@ -94,7 +95,8 @@ const uint32_t PROGMEM unicode_map[] = {
 >>>>>>> 09158b691f (added rgb for layers)
 =======
   THNK,
-  PARTY
+  PARTY,
+  O_LINE
 };
 
 const uint32_t PROGMEM unicode_map[] = {
@@ -218,6 +220,7 @@ const uint32_t PROGMEM unicode_map[] = {
 #define CTLV LCTL(KC_V)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define U_RDO C(KC_Y)
 #define U_PST S(KC_INS)
 #define U_CPY C(KC_INS)
@@ -264,6 +267,13 @@ const uint32_t PROGMEM unicode_map[] = {
 #define U_CUT S(KC_DEL)
 #define U_UND KC_UNDO
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+#define U_RDO C(KC_Y)
+#define U_PST S(KC_INS)
+#define U_CPY C(KC_INS)
+#define U_CUT S(KC_DEL)
+#define U_UND C(KC_Z)
+>>>>>>> 6cb2a4b607 (copy,paste and waste)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //   __  _   _____
@@ -340,11 +350,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______,
 
     // right hand
+<<<<<<< HEAD
     KC_SE_PLUS ,  KC_7, KC_8, KC_9, KC_SE_BSLH, _______,
     KC_SE_MINS,  KC_4, KC_5, KC_6, _______, _______,
     KC_SE_EQAL,  KC_1, KC_2, KC_3, KC_SE_GRAV, _______,
      KC_SE_LPRN,  KC_0, KC_SE_RPRN
 >>>>>>> dfc172e658 (update layout)
+=======
+    KC_SE_PLUS,  KC_7, KC_8, KC_9, SLSH, _______,
+    KC_SE_MINS,  KC_4, KC_5, KC_6, COMM, _______,
+    KC_SE_EQAL,  KC_1, KC_2, KC_3, DOT, _______,
+    KC_SE_LPRN,  KC_0, KC_SE_RPRN
+>>>>>>> 6cb2a4b607 (copy,paste and waste)
     ),
 //      _
 //  /  /_|(__/ -/
@@ -380,7 +397,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // right hand
     KC_PGUP, KC_HOME, KC_UP, KC_END, KC_INS, _______,
     KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, M_GIT_ST, _______,
-    U_CPY, U_CUT, U_PST, U_RDO ,U_UND, M_CD_DOT,
+    U_CUT,   U_CPY, U_PST, U_RDO ,U_UND, M_CD_DOT,
     KC_SE_LCBR,  _______, KC_SE_RCBR
     ),
 <<<<<<< HEAD
@@ -402,6 +419,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______,
     // right hand
     KC_SE_QUO,  KC_SE_AMPR, KC_SE_ASTR, KC_SE_BSLH, _______, KC_SE_GRAV,
+<<<<<<< HEAD
     KC_SE_COL,  KC_SE_DLR,  KC_SE_PERC, KC_SE_CIRC, _______, _______,
     KC_SE_TILD, KC_SE_EXCL, KC_SE_AT, KC_SE_HASH, KC_SE_PIPE, _______,
     KC_SE_LBRC, KC_SE_MINS, KC_SE_RBRC
@@ -421,6 +439,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 >>>>>>> 09158b691f (added rgb for layers)
 =======
     KC_SE_QUO,  KC_SE_AMPR, KC_SE_ASTR, _______, _______, _______,
+=======
+>>>>>>> 6cb2a4b607 (copy,paste and waste)
     KC_SE_COL,  KC_SE_DLR,  KC_SE_PERC, KC_SE_CIRC, _______, _______,
     KC_SE_TILD, KC_SE_EXCL, KC_SE_AT, KC_SE_HASH, KC_SE_PIPE, _______,
     KC_SE_LBRC, KC_SE_MINS, KC_SE_RBRC
@@ -543,7 +563,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______,
 
     // right hand
-    _______,  _______, _______, _______, _______, RESET,
+    O_LINECMD,  X(O_LINE), _______, _______, _______, RESET,
     _______, X(UWHALE), X(UBOMB), X(UFACE_ROLLING_EYES), X(THNK), _______,
     _______,  _______, _______, _______, _______, _______,
     _______,  _______, _______
@@ -563,8 +583,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // right hand
     KC_SE_PLUS,  KC_7, KC_8, KC_9, _______, _______,
-    KC_SE_MINS,  KC_4, KC_5, KC_6, _______, _______,
-    KC_SE_EQAL,  KC_1, KC_2, KC_3, _______, _______,
+    KC_SE_MINS,  KC_4, KC_5, KC_6, COMM, _______,
+    KC_SE_EQAL,  KC_1, KC_2, KC_3, DOT, _______,
     _______,  KC_0, _______
     )
 >>>>>>> dfc172e658 (update layout)
@@ -591,8 +611,17 @@ switch (keycode) {
       break;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> dfc172e658 (update layout)
+=======
+    case O_LINECMD:
+      if (record->event.pressed) {
+          send_unicode_string("TH⍜SE");
+      }
+      return false;
+      break;
+>>>>>>> 6cb2a4b607 (copy,paste and waste)
     case M_GIT_ST:
       if (record->event.pressed) {
           SEND_STRING("git status"SS_TAP(X_ENTER)"");

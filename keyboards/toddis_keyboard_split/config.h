@@ -20,8 +20,12 @@
 =======
 #define MANUFACTURER torbjorn rasmusson
 #define PRODUCT      toddis_keyboard_split
+<<<<<<< HEAD
  
 >>>>>>> dfc172e658 (update layout)
+=======
+
+>>>>>>> 6cb2a4b607 (copy,paste and waste)
 
 /* key matrix size */
 /* Rows are doubled up */
@@ -73,6 +77,9 @@
 #define RGBLIGHT_SLEEP
 #define RGBLIGHT_SPLIT
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6cb2a4b607 (copy,paste and waste)
 #define RGBLIGHT_HUE_STEP 8
 #define RGBLIGHT_SAT_STEP 8
 #define RGBLIGHT_VAL_STEP 8
