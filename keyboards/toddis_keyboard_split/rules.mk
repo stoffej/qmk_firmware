@@ -20,6 +20,7 @@ SPLIT_KEYBOARD = yes	    # Split keyboard
 UNICODEMAP_ENABLE = yes
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 LTO_ENABLE = yes
 =======
 
@@ -28,3 +29,6 @@ LTO_ENABLE = yes
 =======
  
 >>>>>>> dfc172e658 (update layout)
+=======
+LTO_ENABLE = yes
+>>>>>>> 54b742ae53 (latest fixes before merge)

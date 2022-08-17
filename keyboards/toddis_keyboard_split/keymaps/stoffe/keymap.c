@@ -18,7 +18,6 @@ enum custom_keycodes {
   QUOT,     // ' | "
   M_CD_DOT,
   M_GIT_ST,
-  O_LINECMD,
 };
 
 
@@ -260,6 +259,7 @@ const uint32_t PROGMEM unicode_map[] = {
 #define VS_BM_NEXT LCTL(LALT(KC_N))
 #define VS_BM_TOGGLE LCTL(LALT(KC_K))
 #define VS_BM_LABEL LCTL(LALT(KC_B))
+<<<<<<< HEAD
 =======
 #define U_RDO KC_AGIN
 #define U_PST S(KC_INS)
@@ -274,6 +274,8 @@ const uint32_t PROGMEM unicode_map[] = {
 #define U_CUT S(KC_DEL)
 #define U_UND C(KC_Z)
 >>>>>>> 6cb2a4b607 (copy,paste and waste)
+=======
+>>>>>>> 54b742ae53 (latest fixes before merge)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //   __  _   _____
@@ -513,8 +515,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 =======
 >>>>>>> dfc172e658 (update layout)
 
+<<<<<<< HEAD
     // right hand
 >>>>>>> 09158b691f (added rgb for layers)
+=======
+    // right handö
+>>>>>>> 54b742ae53 (latest fixes before merge)
     _______,  _______, _______, _______, _______, _______,
     _______,  KC_LSPO, KC_LCTL, KC_LALT, _______, _______,
     _______,  _______, _______, _______, _______, _______,
@@ -527,10 +533,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [LAY5] = LAYOUT(
     // left hand
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 54b742ae53 (latest fixes before merge)
     RESET,_______,VS_MV_FILE_PRV , VS_MV_FILE_NXT, VS_GROUP_1, VS_GROUP_2,
     VS_SYMBOLEDITOR,  VS_REFERENCES, VS_IMPLEMENTATION,  VS_DEFINITION ,VS_BACK, VS_FRONT,
     VS_CLOSEPANEL,  VS_CLOSETAB, _______, _______, VS_TABLEFT, VS_TABRIGHT,
     _______,  _______, _______,
+<<<<<<< HEAD
 
     // right hand
     X(USMIL),  X(UKB), X(UCOFFEE), X(UVOLT), X(UBEER),RESET ,
@@ -561,12 +571,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     X(THNK),  X(PARTY), KC_SE_AA, KC_SE_AE, KC_SE_OE, TG(LAY6),
     X(UBOMB),   X(UORHEART), X(UBIC), X(UNERD),   X(UBUG), X(UPARTY),
     _______, _______, _______,
+=======
+>>>>>>> 54b742ae53 (latest fixes before merge)
 
     // right hand
-    O_LINECMD,  X(O_LINE), _______, _______, _______, RESET,
-    _______, X(UWHALE), X(UBOMB), X(UFACE_ROLLING_EYES), X(THNK), _______,
-    _______,  _______, _______, _______, _______, _______,
-    _______,  _______, _______
+    X(USMIL),  X(UKB), X(UCOFFEE), X(UVOLT), X(UBEER),RESET ,
+    X(THNK),  X(PARTY), KC_SE_AA, KC_SE_AE, KC_SE_OE, TG(LAY6),
+    X(UBOMB),   X(UORHEART), X(UBIC), X(UNERD),   X(UBUG), X(UPARTY),
+    X(UTHMUP), _______, _______
+
+
     ),
 
 <<<<<<< HEAD
@@ -576,9 +590,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [LAY6] = LAYOUT(
     // left hand
-    _______,  KC_PGUP, _______, KC_UP, _______, _______,
-    _______,  KC_PGDN, KC_LEFT, KC_DOWN , KC_RGHT, TG(LAY6),
-    _______,  _______, _______, _______, _______, _______,
+    _______, _______ , _______, KC_UP, _______, KC_PGUP,
+    _______, _______ , KC_LEFT, KC_DOWN , KC_RGHT,KC_PGDN ,
+    _______,  _______, _______, _______, _______, TG(LAY6),
     _______,  _______, _______,
 
     // right hand
@@ -612,6 +626,7 @@ switch (keycode) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> dfc172e658 (update layout)
 =======
@@ -622,6 +637,8 @@ switch (keycode) {
       return false;
       break;
 >>>>>>> 6cb2a4b607 (copy,paste and waste)
+=======
+>>>>>>> 54b742ae53 (latest fixes before merge)
     case M_GIT_ST:
       if (record->event.pressed) {
           SEND_STRING("git status"SS_TAP(X_ENTER)"");
