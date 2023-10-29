@@ -43,6 +43,7 @@ and place it in the keymap folder
 can be done by command line interface also
 keymap -c my_config.yaml draw my_keymap.yaml > stoffej.svg
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 first update the config file in the web tool
@@ -53,3 +54,5 @@ store the config in the folder to be used again.
 inkspace för att göra om svg till png
 =======
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+>>>>>>> d3691426f9 (added corne)

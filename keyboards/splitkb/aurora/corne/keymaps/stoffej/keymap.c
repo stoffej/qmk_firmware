@@ -16,6 +16,7 @@
 
 #include QMK_KEYBOARD_H
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 enum layers { BASE, LAY0, LAY1, LAY2, LAY3, LAY4, LAY5 };
 
@@ -34,13 +35,19 @@ enum unicode_names {
     SEAEL,
     SEOEL,
 =======
+=======
+>>>>>>> d3691426f9 (added corne)
 #include "keymap_swedish.h"
 // #include "quantum.h"
 // #include <stdio.h>
 
 
 
+<<<<<<< HEAD
 enum layers { BASE, LAY0, LAY1, LAY2, LAY3, LAY4, LAY5 };
+=======
+enum layers { BASE, LAY0, LAY1, LAY2, LAY3, LAY4, LAY5, LAY6 };
+>>>>>>> d3691426f9 (added corne)
 
 
 enum custom_keycodes {
@@ -56,12 +63,16 @@ enum custom_keycodes {
 
 
 enum unicode_names {
+<<<<<<< HEAD
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+>>>>>>> d3691426f9 (added corne)
   UKB,
   UCOFFEE,
   UVOLT,
   UBEER,
   UTHMUP,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   THUMBSDOWN,
@@ -70,6 +81,8 @@ enum unicode_names {
 =======
   THUMBSDOWN,
 >>>>>>> e04042f974 (fixed unicode)
+=======
+>>>>>>> d3691426f9 (added corne)
   USMIL,
   UBIC,
   UNERD,
@@ -78,6 +91,7 @@ enum unicode_names {
   UORHEART,
   UWHALE,
   UBOMB,
+<<<<<<< HEAD
 <<<<<<< HEAD
   UFACEROLLINGEYES,
   THNK,
@@ -107,11 +121,21 @@ const uint32_t PROGMEM unicode_map[] = {
 
 const uint32_t PROGMEM unicode_map[] = {
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+  UFACE_ROLLING_EYES,
+  THNK,
+  PARTY,
+  O_LINE
+};
+
+const uint32_t PROGMEM unicode_map[] = {
+>>>>>>> d3691426f9 (added corne)
   [UKB]     = 0x2328,   // ⌨
   [UCOFFEE] = 0x2615,   // ☕
   [UVOLT]   = 0x26A1,   // ⚡
   [UBEER]   = 0x1F37B,  // 🍻
   [UTHMUP]  = 0x1F44D,  // 👍
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   [THUMBSDOWN] = 0x1F44E, // 👎
@@ -120,6 +144,8 @@ const uint32_t PROGMEM unicode_map[] = {
 =======
   [THUMBSDOWN] = 0x1F44E, // 👎
 >>>>>>> e04042f974 (fixed unicode)
+=======
+>>>>>>> d3691426f9 (added corne)
   [USMIL]   = 0x1F642,  // 🙂
   [UBIC]    = 0x1F6B2,  // 🚲
   [UNERD]   = 0x1F913,  // 🤓
@@ -128,6 +154,7 @@ const uint32_t PROGMEM unicode_map[] = {
   [UORHEART] = 0x1F9E1, // 🧡
   [UWHALE] = 0x1F433,   // 🐳
   [UBOMB] = 0x1F4A3,    // 💣
+<<<<<<< HEAD
 <<<<<<< HEAD
   [UFACEROLLINGEYES] = 0x1F644, // 🙄
   [THNK] = 0x1F914, // 🤔
@@ -143,10 +170,13 @@ const uint32_t PROGMEM unicode_map[] = {
 #define CTLKCR LCTL_T(KC_R)
 #define QKBOOT QK_BOOT
 =======
+=======
+>>>>>>> d3691426f9 (added corne)
   [UFACE_ROLLING_EYES] = 0x1F644, // 🙄
   [THNK] = 0x1F914, // 🤔
   [PARTY] = 0x1F973, // 🥳
   [O_LINE] = 0x235C, // ⍜
+<<<<<<< HEAD
   [GRIMF]  = 0x1F62C, //😬
   [EYES] = 0x1F440,// 👀
   [TREX] = 0x1F996 // 🦖
@@ -256,6 +286,10 @@ const uint32_t PROGMEM unicode_map[] = {
 //      [THUMBSUP] = 0x1F44D,
 //  };
 
+=======
+};
+
+>>>>>>> d3691426f9 (added corne)
 // SWEDISH LETTERS AND SYMBOLS
 // Letters
 #define KCSEAA KC_LBRC               // Å
@@ -296,7 +330,10 @@ const uint32_t PROGMEM unicode_map[] = {
 
 #define CTL_KC_I RCTL_T(KC_I)
 #define CTL_KC_R LCTL_T(KC_R)
+<<<<<<< HEAD
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+>>>>>>> d3691426f9 (added corne)
 
 #define SHFTKCA LSFT_T(KC_A)
 #define SHFTKCO RSFT_T(KC_O)
@@ -313,6 +350,7 @@ const uint32_t PROGMEM unicode_map[] = {
 #define UUND C(KC_Z)
 
 // visual studio code shortcuts
+<<<<<<< HEAD
 <<<<<<< HEAD
 #define VSSYMBOLEDITOR LCTL(LSFT(KC_O))
 #define VSDEFINITION KC_F12
@@ -361,6 +399,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, _______,  _______,  _______,  KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_PIPE, _______,
         _______, _______, _______, KC_LBRC, KC_MINS, KC_RBRC
 =======
+=======
+>>>>>>> d3691426f9 (added corne)
 #define VS_FILE LCTL(KC_P)
 #define VS_OPEN_FILE LCTL(KC_O)
 #define VS_LINE LCTL(KC_G)
@@ -404,13 +444,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LT(LAY0, KC_BSPC ), LT(LAY1,  KC_DEL ), LT(LAY2, KC_TAB), LT(LAY3, KC_ENT), LT(LAY4, KC_SPC ), LT(LAY5,   KC_LWIN )
     ),
     [LAY0] = LAYOUT_split_3x6_3(
+<<<<<<< HEAD
         _______,   _______, _______, _______,    _______, _______,   KCSEPLUS, KC_7, KC_8, KC_9, SLSH, _______,
+=======
+        QK_BOOT,   _______, _______, _______,    _______, _______,   KCSEPLUS, KC_7, KC_8, KC_9, SLSH, _______,
+>>>>>>> d3691426f9 (added corne)
         _______, KC_LSFT, KC_LCTL, KC_LALT,    _______, _______,   KCSEMINS, KC_4, KC_5, KC_6, COMM, _______,
         _______, _______, _______, _______,    _______, _______,   KCSEEQAL, KC_1, KC_2, KC_3, DOT,  _______,
         _______, _______, _______, KCSELPRN, KC_0,    KCSERPRN
     ),
     [LAY1] = LAYOUT_split_3x6_3(
+<<<<<<< HEAD
         QK_BOOT, _______, _______, _______,    _______ , _______ ,  KC_PGUP, KC_HOME, KC_UP,   KC_END,  KC_INS,   _______,
+=======
+        _______, _______, _______, _______,    _______ , _______ ,  KC_PGUP, KC_HOME, KC_UP,   KC_END,  KC_INS,   _______,
+>>>>>>> d3691426f9 (added corne)
         _______, KC_LSFT, KC_LCTL, KC_LALT,    _______ , _______,   KC_PGDN, KC_LEFT, KC_DOWN, KC_RIGHT, M_GIT_ST, _______,
         _______, _______, _______, _______,    _______,  _______,   UCUT,   UCPY,   UPST,   URDO ,  UUND,    M_CD_DOT,
         _______, _______, _______, KCSELCBR, _______,  KCSERCBR
@@ -420,7 +468,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, KC_LSFT, KC_LCTL, KC_LALT,  KCSEDIAE, KCSEACUT, KCSECOL,  KCSEDLR,  KCSEPERC, KCSECIRC, _______,  _______,
         _______, _______, _______, _______,  _______,  _______,  KCSETILD, KCSEEXCL, KCSEAT,   KCSEHASH, KCSEPIPE, _______,
         _______, _______, _______, KCSELBRC, KCSEMINS, KCSERBRC
+<<<<<<< HEAD
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+>>>>>>> d3691426f9 (added corne)
     ),
     [LAY3] = LAYOUT_split_3x6_3(
         _______, _______, _______, KC_MUTE, _______, KC_VOLU, _______, KC_F9, KC_F10, KC_F11, KC_F12, _______,
@@ -429,6 +480,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, KC_TAB,  KC_SPC,  KC_ESC
     ),
     [LAY4] = LAYOUT_split_3x6_3(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         _______, _______, _______, _______, MOBSTASK, KC_PSCR, _______, _______, _______, _______, _______, QKBOOT,
@@ -440,10 +492,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 >>>>>>> e04042f974 (fixed unicode)
         _______, _______, KCSEAA,  KCSEAE,  KCSEOE,  _______, _______, KC_LSFT, KC_LCTL, KC_LALT, _______, _______,
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, KCSEAA,  KCSEAE,  KCSEOE,  _______, _______, KC_LSFT, KC_LCTL, KC_LALT, _______, _______,
+>>>>>>> d3691426f9 (added corne)
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______
     ),
     [LAY5] = LAYOUT_split_3x6_3(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         _______,         _______,       _______ ,   VSMVFILENXT, VSGROUP1, VSGROUP2,  UM(USMIL), UM(UKB),      UM(UCOFFEE), UM(UVOLT), UM(UBEER),  _______,
@@ -451,6 +508,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,           _______, VSCLOSEPANEL,   VSCLOSETAB,           VSTABLEFT, VSTABRIGHT, UM(UBOMB), UM(UORHEART), UM(UBIC),    UM(UNERD), UM(UBUG),  UM(UPARTY),
         _______,         _______,       _______,           _______,      _______,    _______
 =======
+=======
+>>>>>>> d3691426f9 (added corne)
         QK_BOOT,         _______,       VS_MV_FILE_PRV ,   VS_MV_FILE_NXT, VS_GROUP_1, VS_GROUP_2,  X(USMIL), X(UKB),      X(UCOFFEE), X(UVOLT), X(UBEER), QK_BOOT ,
         VS_SYMBOLEDITOR, VS_REFERENCES, VS_IMPLEMENTATION, VS_DEFINITION , VS_BACK,    VS_FRONT,    X(THNK),  X(PARTY),    KCSEAA,     KCSEAE,   KCSEOE,   TG(LAY6),
         VS_CLOSEPANEL,   VS_CLOSETAB,   _______,           _______,        VS_TABLEFT, VS_TABRIGHT, X(UBOMB), X(UORHEART), X(UBIC),    X(UNERD), X(UBUG),  X(UPARTY),
@@ -461,6 +520,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______ , KC_LEFT, KC_DOWN , KC_RIGHT,      KC_PGDN , KCSEMINS, KC_4, KC_5, KC_6, COMM,    _______,
         _______, _______,  _______, _______,  _______,      TG(LAY6), KCSEEQAL, KC_1, KC_2, KC_3, DOT,     _______,
         _______, _______,  _______,                         _______,  KC_0,    _______
+<<<<<<< HEAD
 >>>>>>> 3c99bb2d26 (added corne)
 =======
         _______,         _______,       VS_MV_FILE_PRV ,   VS_MV_FILE_NXT, VS_GROUP_1, VS_GROUP_2,  UM(USMIL), UM(UKB),      UM(UCOFFEE), UM(UVOLT), UM(UBEER),  _______,
@@ -468,50 +528,70 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         VS_CLOSEPANEL,   VS_CLOSETAB,   _______,           _______,        VS_TABLEFT, VS_TABRIGHT, UM(UBOMB), UM(UORHEART), UM(UBIC),    UM(UNERD), UM(UBUG),  UM(UPARTY),
         _______,         _______,       _______,           _______,      _______,    _______
 >>>>>>> e04042f974 (fixed unicode)
+=======
+>>>>>>> d3691426f9 (added corne)
     )
 
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+
+
+>>>>>>> d3691426f9 (added corne)
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 //   #ifdef CONSOLE_ENABLE
 //     uprintf("KL: kc: 0x%04X, col: %u, row: %u, pressed: %b, time: %u, interrupt: %b, count: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.time, record->tap.interrupted, record->tap.count);
 //   #endif
 switch (keycode) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     case MNAME:
 =======
     case M_NAME:
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+    case M_NAME:
+>>>>>>> d3691426f9 (added corne)
       if (record->event.pressed) {
           SEND_STRING("Kristoffer");
       }
       return false;
       break;
 <<<<<<< HEAD
+<<<<<<< HEAD
     case MCDDOT:
 =======
     case M_CD_DOT:
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+    case M_CD_DOT:
+>>>>>>> d3691426f9 (added corne)
       if (record->event.pressed) {
           SEND_STRING("cd .."SS_TAP(X_ENTER)"");
       }
       return false;
       break;
 <<<<<<< HEAD
+<<<<<<< HEAD
     case MGITST:
 =======
     case M_GIT_ST:
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+    case M_GIT_ST:
+>>>>>>> d3691426f9 (added corne)
       if (record->event.pressed) {
           SEND_STRING("git status"SS_TAP(X_ENTER)"");
       }
       return false;
       break;
+<<<<<<< HEAD
 <<<<<<< HEAD
     case MOBSTASK:
       if (record->event.pressed) {
@@ -520,6 +600,8 @@ switch (keycode) {
       return false;
       break;
 =======
+=======
+>>>>>>> d3691426f9 (added corne)
     case COMM:    // , | <
       if (record->event.pressed){
         if (get_mods() & MOD_BIT(KC_LSFT) || get_mods() & MOD_BIT(KC_RSFT)){
@@ -594,16 +676,23 @@ switch (keycode) {
       return false;
       break;
 
+<<<<<<< HEAD
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+>>>>>>> d3691426f9 (added corne)
     }
     return true;
 }
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+
+>>>>>>> d3691426f9 (added corne)
 void keyboard_pre_init_user(void) {
   // Set our LED pin as output
   setPinOutput(24);

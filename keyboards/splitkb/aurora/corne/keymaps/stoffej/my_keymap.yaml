@@ -1,6 +1,7 @@
 layout: {qmk_keyboard: splitkb/aurora/corne/rev1, qmk_layout: LAYOUT_split_3x6_3}
 layers:
 <<<<<<< HEAD
+<<<<<<< HEAD
   L0:
   - ESC
   - Q
@@ -53,6 +54,8 @@ layers:
   - {type: trans}
   - +
 =======
+=======
+>>>>>>> d3691426f9 (added corne)
   L0: [ESC, Q, W, F, P, B, J, L, U, Y, ;, '''', LALT, SHFT KC A, CTL KC R, S, T, G, M, N, E, CTL KC I, SHFT KC O, RALT, LWIN, Z, X, C, D, V, K, H, ',', ., /, LWIN,
     'LT(LAY0, BSPC )', 'LT(LAY1,  DEL )', 'LT(LAY2, TAB)', 'LT(LAY3, ENT)', 'LT(LAY4, SPC )', 'LT(LAY5,   LWIN )']
   L1:
@@ -63,11 +66,15 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - SE PLUS
+<<<<<<< HEAD
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+>>>>>>> d3691426f9 (added corne)
   - '7'
   - '8'
   - '9'
   - /
+<<<<<<< HEAD
 <<<<<<< HEAD
   - {type: trans}
   - {type: trans}
@@ -78,6 +85,8 @@ layers:
   - {type: trans}
   - '-'
 =======
+=======
+>>>>>>> d3691426f9 (added corne)
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LSFT
@@ -86,11 +95,15 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - SE MINS
+<<<<<<< HEAD
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+>>>>>>> d3691426f9 (added corne)
   - '4'
   - '5'
   - '6'
   - ','
+<<<<<<< HEAD
 <<<<<<< HEAD
   - {type: trans}
   - {type: trans}
@@ -101,6 +114,8 @@ layers:
   - {type: trans}
   - '='
 =======
+=======
+>>>>>>> d3691426f9 (added corne)
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -109,11 +124,15 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - SE EQAL
+<<<<<<< HEAD
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+>>>>>>> d3691426f9 (added corne)
   - '1'
   - '2'
   - '3'
   - .
+<<<<<<< HEAD
 <<<<<<< HEAD
   - {type: trans}
   - {type: held}
@@ -217,6 +236,8 @@ layers:
   - $$mdi:volume-high$$
   - {type: trans}
 =======
+=======
+>>>>>>> d3691426f9 (added corne)
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -318,11 +339,15 @@ layers:
   - {t: ▽, type: trans}
   - VOLU
   - {t: ▽, type: trans}
+<<<<<<< HEAD
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+>>>>>>> d3691426f9 (added corne)
   - F9
   - F10
   - F11
   - F12
+<<<<<<< HEAD
 <<<<<<< HEAD
   - {type: trans}
   - {type: trans}
@@ -333,6 +358,8 @@ layers:
   - $$mdi:volume-low$$
   - {type: trans}
 =======
+=======
+>>>>>>> d3691426f9 (added corne)
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -341,11 +368,15 @@ layers:
   - MNXT
   - VOLD
   - {t: ▽, type: trans}
+<<<<<<< HEAD
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+>>>>>>> d3691426f9 (added corne)
   - F5
   - F6
   - F7
   - F8
+<<<<<<< HEAD
 <<<<<<< HEAD
   - {type: trans}
   - {type: trans}
@@ -356,6 +387,8 @@ layers:
   - {type: trans}
   - {type: trans}
 =======
+=======
+>>>>>>> d3691426f9 (added corne)
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -364,11 +397,15 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+<<<<<<< HEAD
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+>>>>>>> d3691426f9 (added corne)
   - F1
   - F2
   - F3
   - F4
+<<<<<<< HEAD
 <<<<<<< HEAD
   - {type: trans}
   - {type: trans}
@@ -464,6 +501,8 @@ layers:
   - {type: trans}
   - {type: held}
 =======
+=======
+>>>>>>> d3691426f9 (added corne)
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -600,4 +639,7 @@ layers:
   - {t: ▽, type: trans}
   - '0'
   - {t: ▽, type: trans}
+<<<<<<< HEAD
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+>>>>>>> d3691426f9 (added corne)
