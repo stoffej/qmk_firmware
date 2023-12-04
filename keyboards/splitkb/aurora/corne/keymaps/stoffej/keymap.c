@@ -44,10 +44,14 @@ enum unicode_names {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 enum layers { BASE, LAY0, LAY1, LAY2, LAY3, LAY4, LAY5 };
 =======
 enum layers { BASE, LAY0, LAY1, LAY2, LAY3, LAY4, LAY5, LAY6 };
 >>>>>>> d3691426f9 (added corne)
+=======
+enum layers { BASE, LAY0, LAY1, LAY2, LAY3, LAY4, LAY5 };
+>>>>>>> 5dccb7b749 (fixed unicode)
 
 
 enum custom_keycodes {
@@ -75,6 +79,7 @@ enum unicode_names {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   THUMBSDOWN,
 =======
 >>>>>>> 3c99bb2d26 (added corne)
@@ -83,6 +88,9 @@ enum unicode_names {
 >>>>>>> e04042f974 (fixed unicode)
 =======
 >>>>>>> d3691426f9 (added corne)
+=======
+  THUMBSDOWN,
+>>>>>>> 5dccb7b749 (fixed unicode)
   USMIL,
   UBIC,
   UNERD,
@@ -125,7 +133,10 @@ const uint32_t PROGMEM unicode_map[] = {
   UFACE_ROLLING_EYES,
   THNK,
   PARTY,
-  O_LINE
+  O_LINE,
+  GRIMF,
+  EYES,
+  TREX
 };
 
 const uint32_t PROGMEM unicode_map[] = {
@@ -138,6 +149,7 @@ const uint32_t PROGMEM unicode_map[] = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   [THUMBSDOWN] = 0x1F44E, // 👎
 =======
 >>>>>>> 3c99bb2d26 (added corne)
@@ -146,6 +158,9 @@ const uint32_t PROGMEM unicode_map[] = {
 >>>>>>> e04042f974 (fixed unicode)
 =======
 >>>>>>> d3691426f9 (added corne)
+=======
+  [THUMBSDOWN] = 0x1F44E, // 👎
+>>>>>>> 5dccb7b749 (fixed unicode)
   [USMIL]   = 0x1F642,  // 🙂
   [UBIC]    = 0x1F6B2,  // 🚲
   [UNERD]   = 0x1F913,  // 🤓
@@ -177,6 +192,9 @@ const uint32_t PROGMEM unicode_map[] = {
   [PARTY] = 0x1F973, // 🥳
   [O_LINE] = 0x235C, // ⍜
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5dccb7b749 (fixed unicode)
   [GRIMF]  = 0x1F62C, //😬
   [EYES] = 0x1F440,// 👀
   [TREX] = 0x1F996 // 🦖
@@ -286,10 +304,13 @@ const uint32_t PROGMEM unicode_map[] = {
 //      [THUMBSUP] = 0x1F44D,
 //  };
 
+<<<<<<< HEAD
 =======
 };
 
 >>>>>>> d3691426f9 (added corne)
+=======
+>>>>>>> 5dccb7b749 (fixed unicode)
 // SWEDISH LETTERS AND SYMBOLS
 // Letters
 #define KCSEAA KC_LBRC               // Å
@@ -445,20 +466,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [LAY0] = LAYOUT_split_3x6_3(
 <<<<<<< HEAD
+<<<<<<< HEAD
         _______,   _______, _______, _______,    _______, _______,   KCSEPLUS, KC_7, KC_8, KC_9, SLSH, _______,
 =======
         QK_BOOT,   _______, _______, _______,    _______, _______,   KCSEPLUS, KC_7, KC_8, KC_9, SLSH, _______,
 >>>>>>> d3691426f9 (added corne)
+=======
+        _______,   _______, _______, _______,    _______, _______,   KCSEPLUS, KC_7, KC_8, KC_9, SLSH, _______,
+>>>>>>> 5dccb7b749 (fixed unicode)
         _______, KC_LSFT, KC_LCTL, KC_LALT,    _______, _______,   KCSEMINS, KC_4, KC_5, KC_6, COMM, _______,
         _______, _______, _______, _______,    _______, _______,   KCSEEQAL, KC_1, KC_2, KC_3, DOT,  _______,
         _______, _______, _______, KCSELPRN, KC_0,    KCSERPRN
     ),
     [LAY1] = LAYOUT_split_3x6_3(
 <<<<<<< HEAD
+<<<<<<< HEAD
         QK_BOOT, _______, _______, _______,    _______ , _______ ,  KC_PGUP, KC_HOME, KC_UP,   KC_END,  KC_INS,   _______,
 =======
         _______, _______, _______, _______,    _______ , _______ ,  KC_PGUP, KC_HOME, KC_UP,   KC_END,  KC_INS,   _______,
 >>>>>>> d3691426f9 (added corne)
+=======
+        QK_BOOT, _______, _______, _______,    _______ , _______ ,  KC_PGUP, KC_HOME, KC_UP,   KC_END,  KC_INS,   _______,
+>>>>>>> 5dccb7b749 (fixed unicode)
         _______, KC_LSFT, KC_LCTL, KC_LALT,    _______ , _______,   KC_PGDN, KC_LEFT, KC_DOWN, KC_RIGHT, M_GIT_ST, _______,
         _______, _______, _______, _______,    _______,  _______,   UCUT,   UCPY,   UPST,   URDO ,  UUND,    M_CD_DOT,
         _______, _______, _______, KCSELCBR, _______,  KCSERCBR
@@ -483,6 +512,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         _______, _______, _______, _______, MOBSTASK, KC_PSCR, _______, _______, _______, _______, _______, QKBOOT,
         _______, _______, UP(SEAAL,SEAAH), UP(SEAEL,SEAEH), UP(SEOEL,SEOEH),  _______, _______, KC_LSFT, KC_LCTL, KC_LALT, _______, _______,
 =======
@@ -494,12 +524,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 >>>>>>> 3c99bb2d26 (added corne)
 =======
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+=======
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, QK_BOOT,
+>>>>>>> 5dccb7b749 (fixed unicode)
         _______, _______, KCSEAA,  KCSEAE,  KCSEOE,  _______, _______, KC_LSFT, KC_LCTL, KC_LALT, _______, _______,
 >>>>>>> d3691426f9 (added corne)
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______
     ),
     [LAY5] = LAYOUT_split_3x6_3(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -523,13 +557,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 <<<<<<< HEAD
 >>>>>>> 3c99bb2d26 (added corne)
 =======
+=======
+>>>>>>> 5dccb7b749 (fixed unicode)
         _______,         _______,       VS_MV_FILE_PRV ,   VS_MV_FILE_NXT, VS_GROUP_1, VS_GROUP_2,  UM(USMIL), UM(UKB),      UM(UCOFFEE), UM(UVOLT), UM(UBEER),  _______,
         VS_SYMBOLEDITOR, VS_REFERENCES, VS_IMPLEMENTATION, VS_DEFINITION , VS_BACK,    VS_FRONT,    UM(THNK),  UM(PARTY),    UM(UTHMUP),     UM(THUMBSDOWN) ,   UM(EYES) ,  UM(TREX),
         VS_CLOSEPANEL,   VS_CLOSETAB,   _______,           _______,        VS_TABLEFT, VS_TABRIGHT, UM(UBOMB), UM(UORHEART), UM(UBIC),    UM(UNERD), UM(UBUG),  UM(UPARTY),
         _______,         _______,       _______,           _______,      _______,    _______
+<<<<<<< HEAD
 >>>>>>> e04042f974 (fixed unicode)
 =======
 >>>>>>> d3691426f9 (added corne)
+=======
+>>>>>>> 5dccb7b749 (fixed unicode)
     )
 
 };

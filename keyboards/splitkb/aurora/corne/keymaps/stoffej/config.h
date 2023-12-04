@@ -17,9 +17,13 @@
 #pragma once
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define UNICODE_SELECTED_MODES UNICODE_MODE_WINCOMPOSE
 =======
 >>>>>>> d3691426f9 (added corne)
+=======
+#define UNICODE_SELECTED_MODES UNICODE_MODE_WINCOMPOSE
+>>>>>>> 5dccb7b749 (fixed unicode)
 #ifdef RGBLIGHT_ENABLE
 #   define RGBLIGHT_EFFECT_BREATHING
 #endif
