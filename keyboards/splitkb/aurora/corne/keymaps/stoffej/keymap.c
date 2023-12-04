@@ -40,7 +40,7 @@ enum unicode_names {
 
 
 
-enum layers { BASE, LAY0, LAY1, LAY2, LAY3, LAY4, LAY5, LAY6 };
+enum layers { BASE, LAY0, LAY1, LAY2, LAY3, LAY4, LAY5 };
 
 
 enum custom_keycodes {
@@ -63,9 +63,13 @@ enum unicode_names {
   UBEER,
   UTHMUP,
 <<<<<<< HEAD
+<<<<<<< HEAD
   THUMBSDOWN,
 =======
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+  THUMBSDOWN,
+>>>>>>> e04042f974 (fixed unicode)
   USMIL,
   UBIC,
   UNERD,
@@ -95,7 +99,10 @@ const uint32_t PROGMEM unicode_map[] = {
   UFACE_ROLLING_EYES,
   THNK,
   PARTY,
-  O_LINE
+  O_LINE,
+  GRIMF,
+  EYES,
+  TREX
 };
 
 const uint32_t PROGMEM unicode_map[] = {
@@ -106,9 +113,13 @@ const uint32_t PROGMEM unicode_map[] = {
   [UBEER]   = 0x1F37B,  // 🍻
   [UTHMUP]  = 0x1F44D,  // 👍
 <<<<<<< HEAD
+<<<<<<< HEAD
   [THUMBSDOWN] = 0x1F44E, // 👎
 =======
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+  [THUMBSDOWN] = 0x1F44E, // 👎
+>>>>>>> e04042f974 (fixed unicode)
   [USMIL]   = 0x1F642,  // 🙂
   [UBIC]    = 0x1F6B2,  // 🚲
   [UNERD]   = 0x1F913,  // 🤓
@@ -136,7 +147,114 @@ const uint32_t PROGMEM unicode_map[] = {
   [THNK] = 0x1F914, // 🤔
   [PARTY] = 0x1F973, // 🥳
   [O_LINE] = 0x235C, // ⍜
+  [GRIMF]  = 0x1F62C, //😬
+  [EYES] = 0x1F440,// 👀
+  [TREX] = 0x1F996 // 🦖
 };
+
+
+//  enum unicode_names {
+//      CKC_EUR,
+//      N_TILDE,
+//      COMB_ACUTE_ACCENT,
+//      GRINNING_FACE, // 😃
+//      BEAMING_FACE, // 😁
+//      GRINNING_FACE_WITH_SWEAT, // 😅
+//      ROLLING_LAUGHING, // 🤣
+//      FACE_TEARS_JOY, // 😂
+//      WINKING_FACE, // 😉
+//      SMILING_FACE_HALO, // 😇
+//      SMILING_FACE_HEARTS, // 🥰
+//      SMILING_FACE_HEART_EYES, // 😍
+//      FACE_BLOWING_KISS, // 😘
+//      FACE_SAVORING_FOOD, // 😋
+//      ZANY_FACE, // 🤪
+//      HUGGING_FACE, // 🤗
+//      SHUSHING_FACE, // 🤫
+//      THINKING_FACE, // 🤔
+//      FACE_RAISED_EYEBROW, // 🤨
+//      NEUTRAL_FACE, // 😐
+//      SMIRKING_FACE, // 😏
+//      FACE_ROLLING_EYES, // 🙄
+//      PENSIVE_FACE, // 😔
+//      FACE_VOMITING, // 🤮
+//      WOOZY_FACE, // 🥴
+//      PLEADING_FACE, // 🥺
+//      LOUDLY_CRYING_FACE, // 😭
+//      DISAPPOINTED_FACE, // 😞
+//      FACE_SYMBOLS_MOUTH, // 🤬
+//      SMILING_FACE_HORNS, // 😈
+//      SKULL, // 💀
+//      PILE_POO, // 💩
+//      GHOST, // 👻
+//      ALIEN_MONSTER, // 👾
+//      RED_HEART, // ❤
+//      BOMB, // 💣
+//      WAVING_HAND, // 👋
+//      OK_HAND, // 👌
+//      CLAPPING_HANDS, // 👏
+//      EYES, // 👀
+//      MAN_FACEPALMING, // 🤦
+//      TURTLE, // 🐢
+//      SNAKE, // 🐍
+//      SPOUTING_WHALE, // 🐳
+//      DRAGON, // 🐉
+//      TREX, // 🦖
+//      THUMBSDOWN, // 👍
+//      THUMBSUP, // 👎
+//  };
+
+//  //https://unicode-table.com/en/#00F1
+//  const uint32_t unicode_map[] PROGMEM = {
+//      [CKC_EUR] = 0x20AC, //€
+//      [N_TILDE] = 0x00F1,  // ñ
+//      [COMB_ACUTE_ACCENT] = 0x0301,  // ´
+//      [GRINNING_FACE] = 0x1F603,
+//      [BEAMING_FACE] = 0x1F601,
+//      [GRINNING_FACE_WITH_SWEAT] = 0x1F605,
+//      [ROLLING_LAUGHING] = 0x1F923,
+//      [FACE_TEARS_JOY] = 0x1F602,
+//      [WINKING_FACE] = 0x1F609,
+//      [SMILING_FACE_HALO] = 0x1F607,
+//      [SMILING_FACE_HEARTS] = 0x1F970,
+//      [SMILING_FACE_HEART_EYES] = 0x1F60D,
+//      [FACE_BLOWING_KISS] = 0x1F618,
+//      [FACE_SAVORING_FOOD] = 0x1F60B,
+//      [ZANY_FACE] = 0x1F92A,
+//      [HUGGING_FACE] = 0x1F917,
+//      [SHUSHING_FACE] = 0x1F92B,
+//      [THINKING_FACE] = 0x1F914,
+//      [FACE_RAISED_EYEBROW] = 0x1F928,
+//      [NEUTRAL_FACE] = 0x1F610,
+//      [SMIRKING_FACE] = 0x1F60F,
+//      [FACE_ROLLING_EYES] = 0x1F644,
+//      [PENSIVE_FACE] = 0x1F614,
+//      [FACE_VOMITING] = 0x1F92E,
+//      [WOOZY_FACE] = 0x1F974,
+//      [PLEADING_FACE] = 0x1F97A,
+//      [LOUDLY_CRYING_FACE] = 0x1F62D,
+//      [DISAPPOINTED_FACE] = 0x1F61E,
+//      [FACE_SYMBOLS_MOUTH] = 0x1F92C,
+//      [SMILING_FACE_HORNS] = 0x1F608,
+//      [SKULL] = 0x1F480,
+//      [PILE_POO] = 0x1F4A9,
+//      [GHOST] = 0x1F47B,
+//      [ALIEN_MONSTER] = 0x1F47E,
+//      [RED_HEART] = 0x2764,
+//      [BOMB] = 0x1F4A3,
+//      [WAVING_HAND] = 0x1F44B,
+//      [OK_HAND] = 0x1F44C,
+//      [CLAPPING_HANDS] = 0x1F44F,
+//      [EYES] = 0x1F440,
+//      [MAN_FACEPALMING] = 0x1F926,
+//      [TURTLE] = 0x1F422,
+//      [SNAKE] = 0x1F40D,
+//      [SPOUTING_WHALE] = 0x1F433,
+//      [DRAGON] = 0x1F409,
+//      [TREX] = 0x1F996,
+//      [THUMBSDOWN] = 0x1F44E,
+//      [THUMBSUP] = 0x1F44D,
+//  };
 
 // SWEDISH LETTERS AND SYMBOLS
 // Letters
@@ -286,13 +404,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LT(LAY0, KC_BSPC ), LT(LAY1,  KC_DEL ), LT(LAY2, KC_TAB), LT(LAY3, KC_ENT), LT(LAY4, KC_SPC ), LT(LAY5,   KC_LWIN )
     ),
     [LAY0] = LAYOUT_split_3x6_3(
-        QK_BOOT,   _______, _______, _______,    _______, _______,   KCSEPLUS, KC_7, KC_8, KC_9, SLSH, _______,
+        _______,   _______, _______, _______,    _______, _______,   KCSEPLUS, KC_7, KC_8, KC_9, SLSH, _______,
         _______, KC_LSFT, KC_LCTL, KC_LALT,    _______, _______,   KCSEMINS, KC_4, KC_5, KC_6, COMM, _______,
         _______, _______, _______, _______,    _______, _______,   KCSEEQAL, KC_1, KC_2, KC_3, DOT,  _______,
         _______, _______, _______, KCSELPRN, KC_0,    KCSERPRN
     ),
     [LAY1] = LAYOUT_split_3x6_3(
-        _______, _______, _______, _______,    _______ , _______ ,  KC_PGUP, KC_HOME, KC_UP,   KC_END,  KC_INS,   _______,
+        QK_BOOT, _______, _______, _______,    _______ , _______ ,  KC_PGUP, KC_HOME, KC_UP,   KC_END,  KC_INS,   _______,
         _______, KC_LSFT, KC_LCTL, KC_LALT,    _______ , _______,   KC_PGDN, KC_LEFT, KC_DOWN, KC_RIGHT, M_GIT_ST, _______,
         _______, _______, _______, _______,    _______,  _______,   UCUT,   UCPY,   UPST,   URDO ,  UUND,    M_CD_DOT,
         _______, _______, _______, KCSELCBR, _______,  KCSERCBR
@@ -312,16 +430,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [LAY4] = LAYOUT_split_3x6_3(
 <<<<<<< HEAD
+<<<<<<< HEAD
         _______, _______, _______, _______, MOBSTASK, KC_PSCR, _______, _______, _______, _______, _______, QKBOOT,
         _______, _______, UP(SEAAL,SEAAH), UP(SEAEL,SEAEH), UP(SEOEL,SEOEH),  _______, _______, KC_LSFT, KC_LCTL, KC_LALT, _______, _______,
 =======
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+=======
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, QK_BOOT,
+>>>>>>> e04042f974 (fixed unicode)
         _______, _______, KCSEAA,  KCSEAE,  KCSEOE,  _______, _______, KC_LSFT, KC_LCTL, KC_LALT, _______, _______,
 >>>>>>> 3c99bb2d26 (added corne)
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______
     ),
     [LAY5] = LAYOUT_split_3x6_3(
+<<<<<<< HEAD
 <<<<<<< HEAD
         _______,         _______,       _______ ,   VSMVFILENXT, VSGROUP1, VSGROUP2,  UM(USMIL), UM(UKB),      UM(UCOFFEE), UM(UVOLT), UM(UBEER),  _______,
         VSSYMBOLEDITOR, VSREFERENCES, VSIMPLEMENTATION, VSDEFINITION , VSBACK,    VSFRONT,    UM(THNK),  UM(PARTY),    UM(UTHMUP),     UM(THUMBSDOWN) ,   UM(EYES) ,  UM(TREX),
@@ -339,6 +462,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______,  _______, _______,  _______,      TG(LAY6), KCSEEQAL, KC_1, KC_2, KC_3, DOT,     _______,
         _______, _______,  _______,                         _______,  KC_0,    _______
 >>>>>>> 3c99bb2d26 (added corne)
+=======
+        _______,         _______,       VS_MV_FILE_PRV ,   VS_MV_FILE_NXT, VS_GROUP_1, VS_GROUP_2,  UM(USMIL), UM(UKB),      UM(UCOFFEE), UM(UVOLT), UM(UBEER),  _______,
+        VS_SYMBOLEDITOR, VS_REFERENCES, VS_IMPLEMENTATION, VS_DEFINITION , VS_BACK,    VS_FRONT,    UM(THNK),  UM(PARTY),    UM(UTHMUP),     UM(THUMBSDOWN) ,   UM(EYES) ,  UM(TREX),
+        VS_CLOSEPANEL,   VS_CLOSETAB,   _______,           _______,        VS_TABLEFT, VS_TABRIGHT, UM(UBOMB), UM(UORHEART), UM(UBIC),    UM(UNERD), UM(UBUG),  UM(UPARTY),
+        _______,         _______,       _______,           _______,      _______,    _______
+>>>>>>> e04042f974 (fixed unicode)
     )
 
 };
