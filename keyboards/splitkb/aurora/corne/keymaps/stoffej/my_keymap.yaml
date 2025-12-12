@@ -1,0 +1,303 @@
+layout: {qmk_keyboard: splitkb/aurora/corne/rev1, qmk_layout: LAYOUT_split_3x6_3}
+layers:
+  L0:
+  - ESC
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - ''''
+  - Alt
+  - {t: A, h: Shift}
+  - {t: R, h: Ctrl}
+  - S
+  - T
+  - G
+  - M
+  - N
+  - E
+  - {t: I, h: Ctrl}
+  - {t: O, h: Shift}
+  - Alt
+  - LWIN
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - ','
+  - .
+  - /
+  - LWIN
+  - {t: '$$mdi:backspace-outline$$', h: LAY1}
+  - {t: '$$mdi:keyboard-backspace$$', h: LAY2}
+  - {t: '$$mdi:keyboard-tab$$', h: LAY3}
+  - {t: '$$mdi:keyboard-return$$', h: LAY4}
+  - {t: '$$mdi:keyboard-space$$', h: LAY5}
+  - {t: gui, h: LAY6}
+  L1:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - +
+  - '7'
+  - '8'
+  - '9'
+  - /
+  - {type: trans}
+  - {type: trans}
+  - Shift
+  - Ctrl
+  - Alt
+  - {type: trans}
+  - {type: trans}
+  - '-'
+  - '4'
+  - '5'
+  - '6'
+  - ','
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - '='
+  - '1'
+  - '2'
+  - '3'
+  - .
+  - {type: trans}
+  - {type: held}
+  - {type: trans}
+  - {type: trans}
+  - (
+  - '0'
+  - )
+  L2:
+  - boot
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - PGUP
+  - HOME
+  - $$mdi:arrow-up-bold$$
+  - END
+  - INS
+  - {type: trans}
+  - {type: trans}
+  - Shift
+  - Ctrl
+  - Alt
+  - {type: trans}
+  - {type: trans}
+  - PGDN
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - git status
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - $$mdi:content-cut$$
+  - $$mdi:content-copy$$
+  - $$mdi:content-paste$$
+  - $$mdi:redo$$
+  - $$mdi:undo$$
+  - cd ..
+  - {type: trans}
+  - {type: held}
+  - {type: trans}
+  - '{'
+  - {type: trans}
+  - '}'
+  L3:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - '"'
+  - {type: trans}
+  - ''''
+  - '&'
+  - '*'
+  - \
+  - '`'
+  - {type: trans}
+  - {type: trans}
+  - Shift
+  - Ctrl
+  - Alt
+  - '`'
+  - {type: trans}
+  - ':'
+  - $
+  - '%'
+  - ^
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - '~'
+  - '!'
+  - '@'
+  - '#'
+  - '|'
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: held}
+  - '['
+  - '-'
+  - ']'
+  L4:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - $$mdi:volume-off$$
+  - {type: trans}
+  - $$mdi:volume-high$$
+  - {type: trans}
+  - F9
+  - F10
+  - F11
+  - F12
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - $$mdi:skip-previous$$
+  - $$mdi:play$$
+  - $$mdi:skip-next$$
+  - $$mdi:volume-low$$
+  - {type: trans}
+  - F5
+  - F6
+  - F7
+  - F8
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - F1
+  - F2
+  - F3
+  - F4
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: held}
+  - SPC
+  - ESC
+  L5:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - obsidian task
+  - PSCR
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - boot
+  - {type: trans}
+  - {type: trans}
+  - Å
+  - Ä
+  - Ö
+  - {type: trans}
+  - {type: trans}
+  - Shift
+  - Ctrl
+  - Alt
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: held}
+  - {type: trans}
+  L6:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - mv file nxt
+  - grp 1
+  - grp 2
+  - 🤓
+  - ⌨
+  - ☕
+  - ⚡
+  - 🍺
+  - {type: trans}
+  - sym edit
+  - prefs
+  - impl
+  - defin.
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-right-bold$$
+  - 🤔
+  - 🥳
+  - 👍
+  - 👎
+  - 👀
+  - 🦖
+  - {type: trans}
+  - {type: trans}
+  - close panel
+  - close tab
+  - tab left
+  - tab right
+  - 💣
+  - 🧡
+  - 🚲
+  - 🤓
+  - 🐛
+  - 🎉
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: held}
